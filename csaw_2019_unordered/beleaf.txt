@@ -1,0 +1,2399 @@
+
+beleaf:     file format elf64-x86-64
+
+
+Disassembly of section .interp:
+
+0000000000000238 <.interp>:
+ 238:	2f                   	(bad)  
+ 239:	6c                   	ins    BYTE PTR es:[rdi],dx
+ 23a:	69 62 36 34 2f 6c 64 	imul   esp,DWORD PTR [rdx+0x36],0x646c2f34
+ 241:	2d 6c 69 6e 75       	sub    eax,0x756e696c
+ 246:	78 2d                	js     275 <puts@plt-0x40b>
+ 248:	78 38                	js     282 <puts@plt-0x3fe>
+ 24a:	36 2d 36 34 2e 73    	ss sub eax,0x732e3436
+ 250:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+ 251:	2e 32 00             	xor    al,BYTE PTR cs:[rax]
+
+Disassembly of section .note.ABI-tag:
+
+0000000000000254 <.note.ABI-tag>:
+ 254:	04 00                	add    al,0x0
+ 256:	00 00                	add    BYTE PTR [rax],al
+ 258:	10 00                	adc    BYTE PTR [rax],al
+ 25a:	00 00                	add    BYTE PTR [rax],al
+ 25c:	01 00                	add    DWORD PTR [rax],eax
+ 25e:	00 00                	add    BYTE PTR [rax],al
+ 260:	47                   	rex.RXB
+ 261:	4e 55                	rex.WRX push rbp
+ 263:	00 00                	add    BYTE PTR [rax],al
+ 265:	00 00                	add    BYTE PTR [rax],al
+ 267:	00 03                	add    BYTE PTR [rbx],al
+ 269:	00 00                	add    BYTE PTR [rax],al
+ 26b:	00 02                	add    BYTE PTR [rdx],al
+ 26d:	00 00                	add    BYTE PTR [rax],al
+ 26f:	00 00                	add    BYTE PTR [rax],al
+ 271:	00 00                	add    BYTE PTR [rax],al
+	...
+
+Disassembly of section .note.gnu.build-id:
+
+0000000000000274 <.note.gnu.build-id>:
+ 274:	04 00                	add    al,0x0
+ 276:	00 00                	add    BYTE PTR [rax],al
+ 278:	14 00                	adc    al,0x0
+ 27a:	00 00                	add    BYTE PTR [rax],al
+ 27c:	03 00                	add    eax,DWORD PTR [rax]
+ 27e:	00 00                	add    BYTE PTR [rax],al
+ 280:	47                   	rex.RXB
+ 281:	4e 55                	rex.WRX push rbp
+ 283:	00 6d 30             	add    BYTE PTR [rbp+0x30],ch
+ 286:	5e                   	pop    rsi
+ 287:	ed                   	in     eax,dx
+ 288:	7c 9b                	jl     225 <puts@plt-0x45b>
+ 28a:	eb ba                	jmp    246 <puts@plt-0x43a>
+ 28c:	a6                   	cmps   BYTE PTR ds:[rsi],BYTE PTR es:[rdi]
+ 28d:	0b 67 40             	or     esp,DWORD PTR [rdi+0x40]
+ 290:	3a 6c 6f 2b          	cmp    ch,BYTE PTR [rdi+rbp*2+0x2b]
+ 294:	36 de 3c a4          	fidivr WORD PTR ss:[rsp+riz*4]
+
+Disassembly of section .gnu.hash:
+
+0000000000000298 <.gnu.hash>:
+ 298:	01 00                	add    DWORD PTR [rax],eax
+ 29a:	00 00                	add    BYTE PTR [rax],al
+ 29c:	01 00                	add    DWORD PTR [rax],eax
+ 29e:	00 00                	add    BYTE PTR [rax],al
+ 2a0:	01 00                	add    DWORD PTR [rax],eax
+	...
+
+Disassembly of section .dynsym:
+
+00000000000002b8 <.dynsym>:
+	...
+ 2d0:	84 00                	test   BYTE PTR [rax],al
+ 2d2:	00 00                	add    BYTE PTR [rax],al
+ 2d4:	20 00                	and    BYTE PTR [rax],al
+	...
+ 2e6:	00 00                	add    BYTE PTR [rax],al
+ 2e8:	1f                   	(bad)  
+ 2e9:	00 00                	add    BYTE PTR [rax],al
+ 2eb:	00 12                	add    BYTE PTR [rdx],dl
+	...
+ 2fd:	00 00                	add    BYTE PTR [rax],al
+ 2ff:	00 3c 00             	add    BYTE PTR [rax+rax*1],bh
+ 302:	00 00                	add    BYTE PTR [rax],al
+ 304:	12 00                	adc    al,BYTE PTR [rax]
+	...
+ 316:	00 00                	add    BYTE PTR [rax],al
+ 318:	24 00                	and    al,0x0
+ 31a:	00 00                	add    BYTE PTR [rax],al
+ 31c:	12 00                	adc    al,BYTE PTR [rax]
+	...
+ 32e:	00 00                	add    BYTE PTR [rax],al
+ 330:	35 00 00 00 12       	xor    eax,0x12000000
+	...
+ 345:	00 00                	add    BYTE PTR [rax],al
+ 347:	00 52 00             	add    BYTE PTR [rdx+0x0],dl
+ 34a:	00 00                	add    BYTE PTR [rax],al
+ 34c:	12 00                	adc    al,BYTE PTR [rax]
+	...
+ 35e:	00 00                	add    BYTE PTR [rax],al
+ 360:	a0 00 00 00 20 00 00 	movabs al,ds:0x20000000
+ 367:	00 00 
+	...
+ 375:	00 00                	add    BYTE PTR [rax],al
+ 377:	00 10                	add    BYTE PTR [rax],dl
+ 379:	00 00                	add    BYTE PTR [rax],al
+ 37b:	00 12                	add    BYTE PTR [rdx],dl
+	...
+ 38d:	00 00                	add    BYTE PTR [rax],al
+ 38f:	00 0b                	add    BYTE PTR [rbx],cl
+ 391:	00 00                	add    BYTE PTR [rax],al
+ 393:	00 12                	add    BYTE PTR [rdx],dl
+	...
+ 3a5:	00 00                	add    BYTE PTR [rax],al
+ 3a7:	00 af 00 00 00 20    	add    BYTE PTR [rdi+0x20000000],ch
+	...
+ 3bd:	00 00                	add    BYTE PTR [rax],al
+ 3bf:	00 43 00             	add    BYTE PTR [rbx+0x0],al
+ 3c2:	00 00                	add    BYTE PTR [rax],al
+ 3c4:	22 00                	and    al,BYTE PTR [rax]
+	...
+
+Disassembly of section .dynstr:
+
+00000000000003d8 <.dynstr>:
+ 3d8:	00 6c 69 62          	add    BYTE PTR [rcx+rbp*2+0x62],ch
+ 3dc:	63 2e                	movsxd ebp,DWORD PTR [rsi]
+ 3de:	73 6f                	jae    44f <puts@plt-0x231>
+ 3e0:	2e 36 00 65 78       	cs add BYTE PTR ss:[rbp+0x78],ah
+ 3e5:	69 74 00 5f 5f 69 73 	imul   esi,DWORD PTR [rax+rax*1+0x5f],0x6f73695f
+ 3ec:	6f 
+ 3ed:	63 39                	movsxd edi,DWORD PTR [rcx]
+ 3ef:	39 5f 73             	cmp    DWORD PTR [rdi+0x73],ebx
+ 3f2:	63 61 6e             	movsxd esp,DWORD PTR [rcx+0x6e]
+ 3f5:	66 00 70 75          	data16 add BYTE PTR [rax+0x75],dh
+ 3f9:	74 73                	je     46e <puts@plt-0x212>
+ 3fb:	00 5f 5f             	add    BYTE PTR [rdi+0x5f],bl
+ 3fe:	73 74                	jae    474 <puts@plt-0x20c>
+ 400:	61                   	(bad)  
+ 401:	63 6b 5f             	movsxd ebp,DWORD PTR [rbx+0x5f]
+ 404:	63 68 6b             	movsxd ebp,DWORD PTR [rax+0x6b]
+ 407:	5f                   	pop    rdi
+ 408:	66 61                	data16 (bad) 
+ 40a:	69 6c 00 70 72 69 6e 	imul   ebp,DWORD PTR [rax+rax*1+0x70],0x746e6972
+ 411:	74 
+ 412:	66 00 73 74          	data16 add BYTE PTR [rbx+0x74],dh
+ 416:	72 6c                	jb     484 <puts@plt-0x1fc>
+ 418:	65 6e                	outs   dx,BYTE PTR gs:[rsi]
+ 41a:	00 5f 5f             	add    BYTE PTR [rdi+0x5f],bl
+ 41d:	63 78 61             	movsxd edi,DWORD PTR [rax+0x61]
+ 420:	5f                   	pop    rdi
+ 421:	66 69 6e 61 6c 69    	imul   bp,WORD PTR [rsi+0x61],0x696c
+ 427:	7a 65                	jp     48e <puts@plt-0x1f2>
+ 429:	00 5f 5f             	add    BYTE PTR [rdi+0x5f],bl
+ 42c:	6c                   	ins    BYTE PTR es:[rdi],dx
+ 42d:	69 62 63 5f 73 74 61 	imul   esp,DWORD PTR [rdx+0x63],0x6174735f
+ 434:	72 74                	jb     4aa <puts@plt-0x1d6>
+ 436:	5f                   	pop    rdi
+ 437:	6d                   	ins    DWORD PTR es:[rdi],dx
+ 438:	61                   	(bad)  
+ 439:	69 6e 00 47 4c 49 42 	imul   ebp,DWORD PTR [rsi+0x0],0x42494c47
+ 440:	43 5f                	rex.XB pop r15
+ 442:	32 2e                	xor    ch,BYTE PTR [rsi]
+ 444:	37                   	(bad)  
+ 445:	00 47 4c             	add    BYTE PTR [rdi+0x4c],al
+ 448:	49                   	rex.WB
+ 449:	42                   	rex.X
+ 44a:	43 5f                	rex.XB pop r15
+ 44c:	32 2e                	xor    ch,BYTE PTR [rsi]
+ 44e:	34 00                	xor    al,0x0
+ 450:	47                   	rex.RXB
+ 451:	4c                   	rex.WR
+ 452:	49                   	rex.WB
+ 453:	42                   	rex.X
+ 454:	43 5f                	rex.XB pop r15
+ 456:	32 2e                	xor    ch,BYTE PTR [rsi]
+ 458:	32 2e                	xor    ch,BYTE PTR [rsi]
+ 45a:	35 00 5f 49 54       	xor    eax,0x54495f00
+ 45f:	4d 5f                	rex.WRB pop r15
+ 461:	64 65 72 65          	fs gs jb 4ca <puts@plt-0x1b6>
+ 465:	67 69 73 74 65 72 54 	imul   esi,DWORD PTR [ebx+0x74],0x4d547265
+ 46c:	4d 
+ 46d:	43 6c                	rex.XB ins BYTE PTR es:[rdi],dx
+ 46f:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+ 470:	6e                   	outs   dx,BYTE PTR ds:[rsi]
+ 471:	65 54                	gs push rsp
+ 473:	61                   	(bad)  
+ 474:	62                   	(bad)  
+ 475:	6c                   	ins    BYTE PTR es:[rdi],dx
+ 476:	65 00 5f 5f          	add    BYTE PTR gs:[rdi+0x5f],bl
+ 47a:	67 6d                	ins    DWORD PTR es:[edi],dx
+ 47c:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+ 47d:	6e                   	outs   dx,BYTE PTR ds:[rsi]
+ 47e:	5f                   	pop    rdi
+ 47f:	73 74                	jae    4f5 <puts@plt-0x18b>
+ 481:	61                   	(bad)  
+ 482:	72 74                	jb     4f8 <puts@plt-0x188>
+ 484:	5f                   	pop    rdi
+ 485:	5f                   	pop    rdi
+ 486:	00 5f 49             	add    BYTE PTR [rdi+0x49],bl
+ 489:	54                   	push   rsp
+ 48a:	4d 5f                	rex.WRB pop r15
+ 48c:	72 65                	jb     4f3 <puts@plt-0x18d>
+ 48e:	67 69 73 74 65 72 54 	imul   esi,DWORD PTR [ebx+0x74],0x4d547265
+ 495:	4d 
+ 496:	43 6c                	rex.XB ins BYTE PTR es:[rdi],dx
+ 498:	6f                   	outs   dx,DWORD PTR ds:[rsi]
+ 499:	6e                   	outs   dx,BYTE PTR ds:[rsi]
+ 49a:	65 54                	gs push rsp
+ 49c:	61                   	(bad)  
+ 49d:	62                   	.byte 0x62
+ 49e:	6c                   	ins    BYTE PTR es:[rdi],dx
+ 49f:	65                   	gs
+	...
+
+Disassembly of section .gnu.version:
+
+00000000000004a2 <.gnu.version>:
+ 4a2:	00 00                	add    BYTE PTR [rax],al
+ 4a4:	00 00                	add    BYTE PTR [rax],al
+ 4a6:	02 00                	add    al,BYTE PTR [rax]
+ 4a8:	02 00                	add    al,BYTE PTR [rax]
+ 4aa:	03 00                	add    eax,DWORD PTR [rax]
+ 4ac:	02 00                	add    al,BYTE PTR [rax]
+ 4ae:	02 00                	add    al,BYTE PTR [rax]
+ 4b0:	00 00                	add    BYTE PTR [rax],al
+ 4b2:	04 00                	add    al,0x0
+ 4b4:	02 00                	add    al,BYTE PTR [rax]
+ 4b6:	00 00                	add    BYTE PTR [rax],al
+ 4b8:	02 00                	add    al,BYTE PTR [rax]
+
+Disassembly of section .gnu.version_r:
+
+00000000000004c0 <.gnu.version_r>:
+ 4c0:	01 00                	add    DWORD PTR [rax],eax
+ 4c2:	03 00                	add    eax,DWORD PTR [rax]
+ 4c4:	01 00                	add    DWORD PTR [rax],eax
+ 4c6:	00 00                	add    BYTE PTR [rax],al
+ 4c8:	10 00                	adc    BYTE PTR [rax],al
+ 4ca:	00 00                	add    BYTE PTR [rax],al
+ 4cc:	00 00                	add    BYTE PTR [rax],al
+ 4ce:	00 00                	add    BYTE PTR [rax],al
+ 4d0:	17                   	(bad)  
+ 4d1:	69 69 0d 00 00 04 00 	imul   ebp,DWORD PTR [rcx+0xd],0x40000
+ 4d8:	64 00 00             	add    BYTE PTR fs:[rax],al
+ 4db:	00 10                	add    BYTE PTR [rax],dl
+ 4dd:	00 00                	add    BYTE PTR [rax],al
+ 4df:	00 14 69             	add    BYTE PTR [rcx+rbp*2],dl
+ 4e2:	69 0d 00 00 03 00 6e 	imul   ecx,DWORD PTR [rip+0x30000],0x6e        # 304ec <__cxa_finalize@plt+0x2fe0c>
+ 4e9:	00 00 00 
+ 4ec:	10 00                	adc    BYTE PTR [rax],al
+ 4ee:	00 00                	add    BYTE PTR [rax],al
+ 4f0:	75 1a                	jne    50c <puts@plt-0x174>
+ 4f2:	69 09 00 00 02 00    	imul   ecx,DWORD PTR [rcx],0x20000
+ 4f8:	78 00                	js     4fa <puts@plt-0x186>
+ 4fa:	00 00                	add    BYTE PTR [rax],al
+ 4fc:	00 00                	add    BYTE PTR [rax],al
+	...
+
+Disassembly of section .rela.dyn:
+
+0000000000000500 <.rela.dyn>:
+ 500:	90                   	nop
+ 501:	0d 20 00 00 00       	or     eax,0x20
+ 506:	00 00                	add    BYTE PTR [rax],al
+ 508:	08 00                	or     BYTE PTR [rax],al
+ 50a:	00 00                	add    BYTE PTR [rax],al
+ 50c:	00 00                	add    BYTE PTR [rax],al
+ 50e:	00 00                	add    BYTE PTR [rax],al
+ 510:	f0 07                	lock (bad) 
+ 512:	00 00                	add    BYTE PTR [rax],al
+ 514:	00 00                	add    BYTE PTR [rax],al
+ 516:	00 00                	add    BYTE PTR [rax],al
+ 518:	98                   	cwde   
+ 519:	0d 20 00 00 00       	or     eax,0x20
+ 51e:	00 00                	add    BYTE PTR [rax],al
+ 520:	08 00                	or     BYTE PTR [rax],al
+ 522:	00 00                	add    BYTE PTR [rax],al
+ 524:	00 00                	add    BYTE PTR [rax],al
+ 526:	00 00                	add    BYTE PTR [rax],al
+ 528:	b0 07                	mov    al,0x7
+ 52a:	00 00                	add    BYTE PTR [rax],al
+ 52c:	00 00                	add    BYTE PTR [rax],al
+ 52e:	00 00                	add    BYTE PTR [rax],al
+ 530:	08 10                	or     BYTE PTR [rax],dl
+ 532:	20 00                	and    BYTE PTR [rax],al
+ 534:	00 00                	add    BYTE PTR [rax],al
+ 536:	00 00                	add    BYTE PTR [rax],al
+ 538:	08 00                	or     BYTE PTR [rax],al
+ 53a:	00 00                	add    BYTE PTR [rax],al
+ 53c:	00 00                	add    BYTE PTR [rax],al
+ 53e:	00 00                	add    BYTE PTR [rax],al
+ 540:	08 10                	or     BYTE PTR [rax],dl
+ 542:	20 00                	and    BYTE PTR [rax],al
+ 544:	00 00                	add    BYTE PTR [rax],al
+ 546:	00 00                	add    BYTE PTR [rax],al
+ 548:	d8 0f                	fmul   DWORD PTR [rdi]
+ 54a:	20 00                	and    BYTE PTR [rax],al
+ 54c:	00 00                	add    BYTE PTR [rax],al
+ 54e:	00 00                	add    BYTE PTR [rax],al
+ 550:	06                   	(bad)  
+ 551:	00 00                	add    BYTE PTR [rax],al
+ 553:	00 01                	add    BYTE PTR [rcx],al
+	...
+ 55d:	00 00                	add    BYTE PTR [rax],al
+ 55f:	00 e0                	add    al,ah
+ 561:	0f 20 00             	mov    rax,cr0
+ 564:	00 00                	add    BYTE PTR [rax],al
+ 566:	00 00                	add    BYTE PTR [rax],al
+ 568:	06                   	(bad)  
+ 569:	00 00                	add    BYTE PTR [rax],al
+ 56b:	00 06                	add    BYTE PTR [rsi],al
+	...
+ 575:	00 00                	add    BYTE PTR [rax],al
+ 577:	00 e8                	add    al,ch
+ 579:	0f 20 00             	mov    rax,cr0
+ 57c:	00 00                	add    BYTE PTR [rax],al
+ 57e:	00 00                	add    BYTE PTR [rax],al
+ 580:	06                   	(bad)  
+ 581:	00 00                	add    BYTE PTR [rax],al
+ 583:	00 07                	add    BYTE PTR [rdi],al
+	...
+ 58d:	00 00                	add    BYTE PTR [rax],al
+ 58f:	00 f0                	add    al,dh
+ 591:	0f 20 00             	mov    rax,cr0
+ 594:	00 00                	add    BYTE PTR [rax],al
+ 596:	00 00                	add    BYTE PTR [rax],al
+ 598:	06                   	(bad)  
+ 599:	00 00                	add    BYTE PTR [rax],al
+ 59b:	00 0a                	add    BYTE PTR [rdx],cl
+	...
+ 5a5:	00 00                	add    BYTE PTR [rax],al
+ 5a7:	00 f8                	add    al,bh
+ 5a9:	0f 20 00             	mov    rax,cr0
+ 5ac:	00 00                	add    BYTE PTR [rax],al
+ 5ae:	00 00                	add    BYTE PTR [rax],al
+ 5b0:	06                   	(bad)  
+ 5b1:	00 00                	add    BYTE PTR [rax],al
+ 5b3:	00 0b                	add    BYTE PTR [rbx],cl
+	...
+
+Disassembly of section .rela.plt:
+
+00000000000005c0 <.rela.plt>:
+ 5c0:	a8 0f                	test   al,0xf
+ 5c2:	20 00                	and    BYTE PTR [rax],al
+ 5c4:	00 00                	add    BYTE PTR [rax],al
+ 5c6:	00 00                	add    BYTE PTR [rax],al
+ 5c8:	07                   	(bad)  
+ 5c9:	00 00                	add    BYTE PTR [rax],al
+ 5cb:	00 02                	add    BYTE PTR [rdx],al
+	...
+ 5d5:	00 00                	add    BYTE PTR [rax],al
+ 5d7:	00 b0 0f 20 00 00    	add    BYTE PTR [rax+0x200f],dh
+ 5dd:	00 00                	add    BYTE PTR [rax],al
+ 5df:	00 07                	add    BYTE PTR [rdi],al
+ 5e1:	00 00                	add    BYTE PTR [rax],al
+ 5e3:	00 03                	add    BYTE PTR [rbx],al
+	...
+ 5ed:	00 00                	add    BYTE PTR [rax],al
+ 5ef:	00 b8 0f 20 00 00    	add    BYTE PTR [rax+0x200f],bh
+ 5f5:	00 00                	add    BYTE PTR [rax],al
+ 5f7:	00 07                	add    BYTE PTR [rdi],al
+ 5f9:	00 00                	add    BYTE PTR [rax],al
+ 5fb:	00 04 00             	add    BYTE PTR [rax+rax*1],al
+	...
+ 606:	00 00                	add    BYTE PTR [rax],al
+ 608:	c0 0f 20             	ror    BYTE PTR [rdi],0x20
+ 60b:	00 00                	add    BYTE PTR [rax],al
+ 60d:	00 00                	add    BYTE PTR [rax],al
+ 60f:	00 07                	add    BYTE PTR [rdi],al
+ 611:	00 00                	add    BYTE PTR [rax],al
+ 613:	00 05 00 00 00 00    	add    BYTE PTR [rip+0x0],al        # 619 <puts@plt-0x67>
+ 619:	00 00                	add    BYTE PTR [rax],al
+ 61b:	00 00                	add    BYTE PTR [rax],al
+ 61d:	00 00                	add    BYTE PTR [rax],al
+ 61f:	00 c8                	add    al,cl
+ 621:	0f 20 00             	mov    rax,cr0
+ 624:	00 00                	add    BYTE PTR [rax],al
+ 626:	00 00                	add    BYTE PTR [rax],al
+ 628:	07                   	(bad)  
+ 629:	00 00                	add    BYTE PTR [rax],al
+ 62b:	00 08                	add    BYTE PTR [rax],cl
+	...
+ 635:	00 00                	add    BYTE PTR [rax],al
+ 637:	00 d0                	add    al,dl
+ 639:	0f 20 00             	mov    rax,cr0
+ 63c:	00 00                	add    BYTE PTR [rax],al
+ 63e:	00 00                	add    BYTE PTR [rax],al
+ 640:	07                   	(bad)  
+ 641:	00 00                	add    BYTE PTR [rax],al
+ 643:	00 09                	add    BYTE PTR [rcx],cl
+	...
+
+Disassembly of section .init:
+
+0000000000000650 <.init>:
+ 650:	48 83 ec 08          	sub    rsp,0x8
+ 654:	48 8b 05 8d 09 20 00 	mov    rax,QWORD PTR [rip+0x20098d]        # 200fe8 <__cxa_finalize@plt+0x200908>
+ 65b:	48 85 c0             	test   rax,rax
+ 65e:	74 02                	je     662 <puts@plt-0x1e>
+ 660:	ff d0                	call   rax
+ 662:	48 83 c4 08          	add    rsp,0x8
+ 666:	c3                   	ret    
+
+Disassembly of section .plt:
+
+0000000000000670 <puts@plt-0x10>:
+ 670:	ff 35 22 09 20 00    	push   QWORD PTR [rip+0x200922]        # 200f98 <__cxa_finalize@plt+0x2008b8>
+ 676:	ff 25 24 09 20 00    	jmp    QWORD PTR [rip+0x200924]        # 200fa0 <__cxa_finalize@plt+0x2008c0>
+ 67c:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+
+0000000000000680 <puts@plt>:
+ 680:	ff 25 22 09 20 00    	jmp    QWORD PTR [rip+0x200922]        # 200fa8 <__cxa_finalize@plt+0x2008c8>
+ 686:	68 00 00 00 00       	push   0x0
+ 68b:	e9 e0 ff ff ff       	jmp    670 <puts@plt-0x10>
+
+0000000000000690 <strlen@plt>:
+ 690:	ff 25 1a 09 20 00    	jmp    QWORD PTR [rip+0x20091a]        # 200fb0 <__cxa_finalize@plt+0x2008d0>
+ 696:	68 01 00 00 00       	push   0x1
+ 69b:	e9 d0 ff ff ff       	jmp    670 <puts@plt-0x10>
+
+00000000000006a0 <__stack_chk_fail@plt>:
+ 6a0:	ff 25 12 09 20 00    	jmp    QWORD PTR [rip+0x200912]        # 200fb8 <__cxa_finalize@plt+0x2008d8>
+ 6a6:	68 02 00 00 00       	push   0x2
+ 6ab:	e9 c0 ff ff ff       	jmp    670 <puts@plt-0x10>
+
+00000000000006b0 <printf@plt>:
+ 6b0:	ff 25 0a 09 20 00    	jmp    QWORD PTR [rip+0x20090a]        # 200fc0 <__cxa_finalize@plt+0x2008e0>
+ 6b6:	68 03 00 00 00       	push   0x3
+ 6bb:	e9 b0 ff ff ff       	jmp    670 <puts@plt-0x10>
+
+00000000000006c0 <__isoc99_scanf@plt>:
+ 6c0:	ff 25 02 09 20 00    	jmp    QWORD PTR [rip+0x200902]        # 200fc8 <__cxa_finalize@plt+0x2008e8>
+ 6c6:	68 04 00 00 00       	push   0x4
+ 6cb:	e9 a0 ff ff ff       	jmp    670 <puts@plt-0x10>
+
+00000000000006d0 <exit@plt>:
+ 6d0:	ff 25 fa 08 20 00    	jmp    QWORD PTR [rip+0x2008fa]        # 200fd0 <__cxa_finalize@plt+0x2008f0>
+ 6d6:	68 05 00 00 00       	push   0x5
+ 6db:	e9 90 ff ff ff       	jmp    670 <puts@plt-0x10>
+
+Disassembly of section .plt.got:
+
+00000000000006e0 <__cxa_finalize@plt>:
+ 6e0:	ff 25 12 09 20 00    	jmp    QWORD PTR [rip+0x200912]        # 200ff8 <__cxa_finalize@plt+0x200918>
+ 6e6:	66 90                	xchg   ax,ax
+
+Disassembly of section .text:
+
+00000000000006f0 <.text>:
+ 6f0:	31 ed                	xor    ebp,ebp
+ 6f2:	49 89 d1             	mov    r9,rdx
+ 6f5:	5e                   	pop    rsi
+ 6f6:	48 89 e2             	mov    rdx,rsp
+ 6f9:	48 83 e4 f0          	and    rsp,0xfffffffffffffff0
+ 6fd:	50                   	push   rax
+ 6fe:	54                   	push   rsp
+ 6ff:	4c 8d 05 4a 03 00 00 	lea    r8,[rip+0x34a]        # a50 <__cxa_finalize@plt+0x370>
+ 706:	48 8d 0d d3 02 00 00 	lea    rcx,[rip+0x2d3]        # 9e0 <__cxa_finalize@plt+0x300>
+ 70d:	48 8d 3d 8d 01 00 00 	lea    rdi,[rip+0x18d]        # 8a1 <__cxa_finalize@plt+0x1c1>
+ 714:	ff 15 c6 08 20 00    	call   QWORD PTR [rip+0x2008c6]        # 200fe0 <__cxa_finalize@plt+0x200900>
+ 71a:	f4                   	hlt    
+ 71b:	0f 1f 44 00 00       	nop    DWORD PTR [rax+rax*1+0x0]
+ 720:	48 8d 3d c1 0e 20 00 	lea    rdi,[rip+0x200ec1]        # 2015e8 <__cxa_finalize@plt+0x200f08>
+ 727:	55                   	push   rbp
+ 728:	48 8d 05 b9 0e 20 00 	lea    rax,[rip+0x200eb9]        # 2015e8 <__cxa_finalize@plt+0x200f08>
+ 72f:	48 39 f8             	cmp    rax,rdi
+ 732:	48 89 e5             	mov    rbp,rsp
+ 735:	74 19                	je     750 <__cxa_finalize@plt+0x70>
+ 737:	48 8b 05 9a 08 20 00 	mov    rax,QWORD PTR [rip+0x20089a]        # 200fd8 <__cxa_finalize@plt+0x2008f8>
+ 73e:	48 85 c0             	test   rax,rax
+ 741:	74 0d                	je     750 <__cxa_finalize@plt+0x70>
+ 743:	5d                   	pop    rbp
+ 744:	ff e0                	jmp    rax
+ 746:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+ 74d:	00 00 00 
+ 750:	5d                   	pop    rbp
+ 751:	c3                   	ret    
+ 752:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+ 756:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+ 75d:	00 00 00 
+ 760:	48 8d 3d 81 0e 20 00 	lea    rdi,[rip+0x200e81]        # 2015e8 <__cxa_finalize@plt+0x200f08>
+ 767:	48 8d 35 7a 0e 20 00 	lea    rsi,[rip+0x200e7a]        # 2015e8 <__cxa_finalize@plt+0x200f08>
+ 76e:	55                   	push   rbp
+ 76f:	48 29 fe             	sub    rsi,rdi
+ 772:	48 89 e5             	mov    rbp,rsp
+ 775:	48 c1 fe 03          	sar    rsi,0x3
+ 779:	48 89 f0             	mov    rax,rsi
+ 77c:	48 c1 e8 3f          	shr    rax,0x3f
+ 780:	48 01 c6             	add    rsi,rax
+ 783:	48 d1 fe             	sar    rsi,1
+ 786:	74 18                	je     7a0 <__cxa_finalize@plt+0xc0>
+ 788:	48 8b 05 61 08 20 00 	mov    rax,QWORD PTR [rip+0x200861]        # 200ff0 <__cxa_finalize@plt+0x200910>
+ 78f:	48 85 c0             	test   rax,rax
+ 792:	74 0c                	je     7a0 <__cxa_finalize@plt+0xc0>
+ 794:	5d                   	pop    rbp
+ 795:	ff e0                	jmp    rax
+ 797:	66 0f 1f 84 00 00 00 	nop    WORD PTR [rax+rax*1+0x0]
+ 79e:	00 00 
+ 7a0:	5d                   	pop    rbp
+ 7a1:	c3                   	ret    
+ 7a2:	0f 1f 40 00          	nop    DWORD PTR [rax+0x0]
+ 7a6:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+ 7ad:	00 00 00 
+ 7b0:	80 3d 31 0e 20 00 00 	cmp    BYTE PTR [rip+0x200e31],0x0        # 2015e8 <__cxa_finalize@plt+0x200f08>
+ 7b7:	75 2f                	jne    7e8 <__cxa_finalize@plt+0x108>
+ 7b9:	48 83 3d 37 08 20 00 	cmp    QWORD PTR [rip+0x200837],0x0        # 200ff8 <__cxa_finalize@plt+0x200918>
+ 7c0:	00 
+ 7c1:	55                   	push   rbp
+ 7c2:	48 89 e5             	mov    rbp,rsp
+ 7c5:	74 0c                	je     7d3 <__cxa_finalize@plt+0xf3>
+ 7c7:	48 8b 3d 3a 08 20 00 	mov    rdi,QWORD PTR [rip+0x20083a]        # 201008 <__cxa_finalize@plt+0x200928>
+ 7ce:	e8 0d ff ff ff       	call   6e0 <__cxa_finalize@plt>
+ 7d3:	e8 48 ff ff ff       	call   720 <__cxa_finalize@plt+0x40>
+ 7d8:	c6 05 09 0e 20 00 01 	mov    BYTE PTR [rip+0x200e09],0x1        # 2015e8 <__cxa_finalize@plt+0x200f08>
+ 7df:	5d                   	pop    rbp
+ 7e0:	c3                   	ret    
+ 7e1:	0f 1f 80 00 00 00 00 	nop    DWORD PTR [rax+0x0]
+ 7e8:	f3 c3                	repz ret 
+ 7ea:	66 0f 1f 44 00 00    	nop    WORD PTR [rax+rax*1+0x0]
+ 7f0:	55                   	push   rbp
+ 7f1:	48 89 e5             	mov    rbp,rsp
+ 7f4:	5d                   	pop    rbp
+ 7f5:	e9 66 ff ff ff       	jmp    760 <__cxa_finalize@plt+0x80>
+ 7fa:	55                   	push   rbp
+ 7fb:	48 89 e5             	mov    rbp,rsp
+ 7fe:	89 f8                	mov    eax,edi
+ 800:	88 45 ec             	mov    BYTE PTR [rbp-0x14],al
+ 803:	48 c7 45 f8 00 00 00 	mov    QWORD PTR [rbp-0x8],0x0
+ 80a:	00 
+ 80b:	e9 80 00 00 00       	jmp    890 <__cxa_finalize@plt+0x1b0>
+ 810:	0f be 55 ec          	movsx  edx,BYTE PTR [rbp-0x14]
+ 814:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+ 818:	48 8d 0c 85 00 00 00 	lea    rcx,[rax*4+0x0]
+ 81f:	00 
+ 820:	48 8d 05 f9 07 20 00 	lea    rax,[rip+0x2007f9]        # 201020 <__cxa_finalize@plt+0x200940>
+ 827:	8b 04 01             	mov    eax,DWORD PTR [rcx+rax*1]
+ 82a:	39 c2                	cmp    edx,eax
+ 82c:	75 06                	jne    834 <__cxa_finalize@plt+0x154>
+ 82e:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+ 832:	eb 6b                	jmp    89f <__cxa_finalize@plt+0x1bf>
+ 834:	0f be 55 ec          	movsx  edx,BYTE PTR [rbp-0x14]
+ 838:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+ 83c:	48 8d 0c 85 00 00 00 	lea    rcx,[rax*4+0x0]
+ 843:	00 
+ 844:	48 8d 05 d5 07 20 00 	lea    rax,[rip+0x2007d5]        # 201020 <__cxa_finalize@plt+0x200940>
+ 84b:	8b 04 01             	mov    eax,DWORD PTR [rcx+rax*1]
+ 84e:	39 c2                	cmp    edx,eax
+ 850:	7d 11                	jge    863 <__cxa_finalize@plt+0x183>
+ 852:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+ 856:	48 01 c0             	add    rax,rax
+ 859:	48 83 c0 01          	add    rax,0x1
+ 85d:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+ 861:	eb 2d                	jmp    890 <__cxa_finalize@plt+0x1b0>
+ 863:	0f be 55 ec          	movsx  edx,BYTE PTR [rbp-0x14]
+ 867:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+ 86b:	48 8d 0c 85 00 00 00 	lea    rcx,[rax*4+0x0]
+ 872:	00 
+ 873:	48 8d 05 a6 07 20 00 	lea    rax,[rip+0x2007a6]        # 201020 <__cxa_finalize@plt+0x200940>
+ 87a:	8b 04 01             	mov    eax,DWORD PTR [rcx+rax*1]
+ 87d:	39 c2                	cmp    edx,eax
+ 87f:	7e 0f                	jle    890 <__cxa_finalize@plt+0x1b0>
+ 881:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+ 885:	48 83 c0 01          	add    rax,0x1
+ 889:	48 01 c0             	add    rax,rax
+ 88c:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+ 890:	48 83 7d f8 ff       	cmp    QWORD PTR [rbp-0x8],0xffffffffffffffff
+ 895:	0f 85 75 ff ff ff    	jne    810 <__cxa_finalize@plt+0x130>
+ 89b:	48 8b 45 f8          	mov    rax,QWORD PTR [rbp-0x8]
+ 89f:	5d                   	pop    rbp
+ 8a0:	c3                   	ret    
+ 8a1:	55                   	push   rbp
+ 8a2:	48 89 e5             	mov    rbp,rsp
+ 8a5:	48 81 ec c0 00 00 00 	sub    rsp,0xc0
+ 8ac:	89 bd 4c ff ff ff    	mov    DWORD PTR [rbp-0xb4],edi
+ 8b2:	48 89 b5 40 ff ff ff 	mov    QWORD PTR [rbp-0xc0],rsi
+ 8b9:	64 48 8b 04 25 28 00 	mov    rax,QWORD PTR fs:0x28
+ 8c0:	00 00 
+ 8c2:	48 89 45 f8          	mov    QWORD PTR [rbp-0x8],rax
+ 8c6:	31 c0                	xor    eax,eax
+ 8c8:	48 8d 3d 95 01 00 00 	lea    rdi,[rip+0x195]        # a64 <__cxa_finalize@plt+0x384>
+ 8cf:	b8 00 00 00 00       	mov    eax,0x0
+ 8d4:	e8 d7 fd ff ff       	call   6b0 <printf@plt>
+ 8d9:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+ 8e0:	48 89 c6             	mov    rsi,rax
+ 8e3:	48 8d 3d 8e 01 00 00 	lea    rdi,[rip+0x18e]        # a78 <__cxa_finalize@plt+0x398>
+ 8ea:	b8 00 00 00 00       	mov    eax,0x0
+ 8ef:	e8 cc fd ff ff       	call   6c0 <__isoc99_scanf@plt>
+ 8f4:	48 8d 85 70 ff ff ff 	lea    rax,[rbp-0x90]
+ 8fb:	48 89 c7             	mov    rdi,rax
+ 8fe:	e8 8d fd ff ff       	call   690 <strlen@plt>
+ 903:	48 89 85 60 ff ff ff 	mov    QWORD PTR [rbp-0xa0],rax
+ 90a:	48 83 bd 60 ff ff ff 	cmp    QWORD PTR [rbp-0xa0],0x20
+ 911:	20 
+ 912:	77 16                	ja     92a <__cxa_finalize@plt+0x24a>
+ 914:	48 8d 3d 60 01 00 00 	lea    rdi,[rip+0x160]        # a7b <__cxa_finalize@plt+0x39b>
+ 91b:	e8 60 fd ff ff       	call   680 <puts@plt>
+ 920:	bf 01 00 00 00       	mov    edi,0x1
+ 925:	e8 a6 fd ff ff       	call   6d0 <exit@plt>
+ 92a:	48 c7 85 58 ff ff ff 	mov    QWORD PTR [rbp-0xa8],0x0
+ 931:	00 00 00 00 
+ 935:	eb 66                	jmp    99d <__cxa_finalize@plt+0x2bd>
+ 937:	48 8d 95 70 ff ff ff 	lea    rdx,[rbp-0x90]
+ 93e:	48 8b 85 58 ff ff ff 	mov    rax,QWORD PTR [rbp-0xa8]
+ 945:	48 01 d0             	add    rax,rdx
+ 948:	0f b6 00             	movzx  eax,BYTE PTR [rax]
+ 94b:	0f be c0             	movsx  eax,al
+ 94e:	89 c7                	mov    edi,eax
+ 950:	e8 a5 fe ff ff       	call   7fa <__cxa_finalize@plt+0x11a>
+ 955:	48 89 85 68 ff ff ff 	mov    QWORD PTR [rbp-0x98],rax
+ 95c:	48 8b 85 58 ff ff ff 	mov    rax,QWORD PTR [rbp-0xa8]
+ 963:	48 8d 14 c5 00 00 00 	lea    rdx,[rax*8+0x0]
+ 96a:	00 
+ 96b:	48 8d 05 6e 0b 20 00 	lea    rax,[rip+0x200b6e]        # 2014e0 <__cxa_finalize@plt+0x200e00>
+ 972:	48 8b 04 02          	mov    rax,QWORD PTR [rdx+rax*1]
+ 976:	48 39 85 68 ff ff ff 	cmp    QWORD PTR [rbp-0x98],rax
+ 97d:	74 16                	je     995 <__cxa_finalize@plt+0x2b5>
+ 97f:	48 8d 3d f5 00 00 00 	lea    rdi,[rip+0xf5]        # a7b <__cxa_finalize@plt+0x39b>
+ 986:	e8 f5 fc ff ff       	call   680 <puts@plt>
+ 98b:	bf 01 00 00 00       	mov    edi,0x1
+ 990:	e8 3b fd ff ff       	call   6d0 <exit@plt>
+ 995:	48 83 85 58 ff ff ff 	add    QWORD PTR [rbp-0xa8],0x1
+ 99c:	01 
+ 99d:	48 8b 85 58 ff ff ff 	mov    rax,QWORD PTR [rbp-0xa8]
+ 9a4:	48 3b 85 60 ff ff ff 	cmp    rax,QWORD PTR [rbp-0xa0]
+ 9ab:	72 8a                	jb     937 <__cxa_finalize@plt+0x257>
+ 9ad:	48 8d 3d d2 00 00 00 	lea    rdi,[rip+0xd2]        # a86 <__cxa_finalize@plt+0x3a6>
+ 9b4:	e8 c7 fc ff ff       	call   680 <puts@plt>
+ 9b9:	b8 00 00 00 00       	mov    eax,0x0
+ 9be:	48 8b 4d f8          	mov    rcx,QWORD PTR [rbp-0x8]
+ 9c2:	64 48 33 0c 25 28 00 	xor    rcx,QWORD PTR fs:0x28
+ 9c9:	00 00 
+ 9cb:	74 05                	je     9d2 <__cxa_finalize@plt+0x2f2>
+ 9cd:	e8 ce fc ff ff       	call   6a0 <__stack_chk_fail@plt>
+ 9d2:	c9                   	leave  
+ 9d3:	c3                   	ret    
+ 9d4:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+ 9db:	00 00 00 
+ 9de:	66 90                	xchg   ax,ax
+ 9e0:	41 57                	push   r15
+ 9e2:	41 56                	push   r14
+ 9e4:	49 89 d7             	mov    r15,rdx
+ 9e7:	41 55                	push   r13
+ 9e9:	41 54                	push   r12
+ 9eb:	4c 8d 25 9e 03 20 00 	lea    r12,[rip+0x20039e]        # 200d90 <__cxa_finalize@plt+0x2006b0>
+ 9f2:	55                   	push   rbp
+ 9f3:	48 8d 2d 9e 03 20 00 	lea    rbp,[rip+0x20039e]        # 200d98 <__cxa_finalize@plt+0x2006b8>
+ 9fa:	53                   	push   rbx
+ 9fb:	41 89 fd             	mov    r13d,edi
+ 9fe:	49 89 f6             	mov    r14,rsi
+ a01:	4c 29 e5             	sub    rbp,r12
+ a04:	48 83 ec 08          	sub    rsp,0x8
+ a08:	48 c1 fd 03          	sar    rbp,0x3
+ a0c:	e8 3f fc ff ff       	call   650 <puts@plt-0x30>
+ a11:	48 85 ed             	test   rbp,rbp
+ a14:	74 20                	je     a36 <__cxa_finalize@plt+0x356>
+ a16:	31 db                	xor    ebx,ebx
+ a18:	0f 1f 84 00 00 00 00 	nop    DWORD PTR [rax+rax*1+0x0]
+ a1f:	00 
+ a20:	4c 89 fa             	mov    rdx,r15
+ a23:	4c 89 f6             	mov    rsi,r14
+ a26:	44 89 ef             	mov    edi,r13d
+ a29:	41 ff 14 dc          	call   QWORD PTR [r12+rbx*8]
+ a2d:	48 83 c3 01          	add    rbx,0x1
+ a31:	48 39 dd             	cmp    rbp,rbx
+ a34:	75 ea                	jne    a20 <__cxa_finalize@plt+0x340>
+ a36:	48 83 c4 08          	add    rsp,0x8
+ a3a:	5b                   	pop    rbx
+ a3b:	5d                   	pop    rbp
+ a3c:	41 5c                	pop    r12
+ a3e:	41 5d                	pop    r13
+ a40:	41 5e                	pop    r14
+ a42:	41 5f                	pop    r15
+ a44:	c3                   	ret    
+ a45:	90                   	nop
+ a46:	66 2e 0f 1f 84 00 00 	nop    WORD PTR cs:[rax+rax*1+0x0]
+ a4d:	00 00 00 
+ a50:	f3 c3                	repz ret 
+
+Disassembly of section .fini:
+
+0000000000000a54 <.fini>:
+ a54:	48 83 ec 08          	sub    rsp,0x8
+ a58:	48 83 c4 08          	add    rsp,0x8
+ a5c:	c3                   	ret    
+
+Disassembly of section .rodata:
+
+0000000000000a60 <.rodata>:
+ a60:	01 00                	add    DWORD PTR [rax],eax
+ a62:	02 00                	add    al,BYTE PTR [rax]
+ a64:	45 6e                	rex.RB outs dx,BYTE PTR ds:[rsi]
+ a66:	74 65                	je     acd <__cxa_finalize@plt+0x3ed>
+ a68:	72 20                	jb     a8a <__cxa_finalize@plt+0x3aa>
+ a6a:	74 68                	je     ad4 <__cxa_finalize@plt+0x3f4>
+ a6c:	65 20 66 6c          	and    BYTE PTR gs:[rsi+0x6c],ah
+ a70:	61                   	(bad)  
+ a71:	67 0a 3e             	or     bh,BYTE PTR [esi]
+ a74:	3e 3e 20 00          	ds and BYTE PTR ds:[rax],al
+ a78:	25 73 00 49 6e       	and    eax,0x6e490073
+ a7d:	63 6f 72             	movsxd ebp,DWORD PTR [rdi+0x72]
+ a80:	72 65                	jb     ae7 <__cxa_finalize@plt+0x407>
+ a82:	63 74 21 00          	movsxd esi,DWORD PTR [rcx+riz*1+0x0]
+ a86:	43 6f                	rex.XB outs dx,DWORD PTR ds:[rsi]
+ a88:	72 72                	jb     afc <__cxa_finalize@plt+0x41c>
+ a8a:	65 63 74 21 00       	movsxd esi,DWORD PTR gs:[rcx+riz*1+0x0]
+
+Disassembly of section .eh_frame_hdr:
+
+0000000000000a90 <.eh_frame_hdr>:
+ a90:	01 1b                	add    DWORD PTR [rbx],ebx
+ a92:	03 3b                	add    edi,DWORD PTR [rbx]
+ a94:	44 00 00             	add    BYTE PTR [rax],r8b
+ a97:	00 07                	add    BYTE PTR [rdi],al
+ a99:	00 00                	add    BYTE PTR [rax],al
+ a9b:	00 e0                	add    al,ah
+ a9d:	fb                   	sti    
+ a9e:	ff                   	(bad)  
+ a9f:	ff 90 00 00 00 50    	call   QWORD PTR [rax+0x50000000]
+ aa5:	fc                   	cld    
+ aa6:	ff                   	(bad)  
+ aa7:	ff                   	(bad)  
+ aa8:	b8 00 00 00 60       	mov    eax,0x60000000
+ aad:	fc                   	cld    
+ aae:	ff                   	(bad)  
+ aaf:	ff 60 00             	jmp    QWORD PTR [rax+0x0]
+ ab2:	00 00                	add    BYTE PTR [rax],al
+ ab4:	6a fd                	push   0xfffffffffffffffd
+ ab6:	ff                   	(bad)  
+ ab7:	ff d0                	call   rax
+ ab9:	00 00                	add    BYTE PTR [rax],al
+ abb:	00 11                	add    BYTE PTR [rcx],dl
+ abd:	fe                   	(bad)  
+ abe:	ff                   	(bad)  
+ abf:	ff f0                	push   rax
+ ac1:	00 00                	add    BYTE PTR [rax],al
+ ac3:	00 50 ff             	add    BYTE PTR [rax-0x1],dl
+ ac6:	ff                   	(bad)  
+ ac7:	ff 10                	call   QWORD PTR [rax]
+ ac9:	01 00                	add    DWORD PTR [rax],eax
+ acb:	00 c0                	add    al,al
+ acd:	ff                   	(bad)  
+ ace:	ff                   	(bad)  
+ acf:	ff 58 01             	call   FWORD PTR [rax+0x1]
+	...
+
+Disassembly of section .eh_frame:
+
+0000000000000ad8 <.eh_frame>:
+ ad8:	14 00                	adc    al,0x0
+ ada:	00 00                	add    BYTE PTR [rax],al
+ adc:	00 00                	add    BYTE PTR [rax],al
+ ade:	00 00                	add    BYTE PTR [rax],al
+ ae0:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+ ae3:	00 01                	add    BYTE PTR [rcx],al
+ ae5:	78 10                	js     af7 <__cxa_finalize@plt+0x417>
+ ae7:	01 1b                	add    DWORD PTR [rbx],ebx
+ ae9:	0c 07                	or     al,0x7
+ aeb:	08 90 01 07 10 14    	or     BYTE PTR [rax+0x14100701],dl
+ af1:	00 00                	add    BYTE PTR [rax],al
+ af3:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+ af6:	00 00                	add    BYTE PTR [rax],al
+ af8:	f8                   	clc    
+ af9:	fb                   	sti    
+ afa:	ff                   	(bad)  
+ afb:	ff 2b                	jmp    FWORD PTR [rbx]
+	...
+ b05:	00 00                	add    BYTE PTR [rax],al
+ b07:	00 14 00             	add    BYTE PTR [rax+rax*1],dl
+ b0a:	00 00                	add    BYTE PTR [rax],al
+ b0c:	00 00                	add    BYTE PTR [rax],al
+ b0e:	00 00                	add    BYTE PTR [rax],al
+ b10:	01 7a 52             	add    DWORD PTR [rdx+0x52],edi
+ b13:	00 01                	add    BYTE PTR [rcx],al
+ b15:	78 10                	js     b27 <__cxa_finalize@plt+0x447>
+ b17:	01 1b                	add    DWORD PTR [rbx],ebx
+ b19:	0c 07                	or     al,0x7
+ b1b:	08 90 01 00 00 24    	or     BYTE PTR [rax+0x24000001],dl
+ b21:	00 00                	add    BYTE PTR [rax],al
+ b23:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+ b26:	00 00                	add    BYTE PTR [rax],al
+ b28:	48 fb                	rex.W sti 
+ b2a:	ff                   	(bad)  
+ b2b:	ff 70 00             	push   QWORD PTR [rax+0x0]
+ b2e:	00 00                	add    BYTE PTR [rax],al
+ b30:	00 0e                	add    BYTE PTR [rsi],cl
+ b32:	10 46 0e             	adc    BYTE PTR [rsi+0xe],al
+ b35:	18 4a 0f             	sbb    BYTE PTR [rdx+0xf],cl
+ b38:	0b 77 08             	or     esi,DWORD PTR [rdi+0x8]
+ b3b:	80 00 3f             	add    BYTE PTR [rax],0x3f
+ b3e:	1a 3b                	sbb    bh,BYTE PTR [rbx]
+ b40:	2a 33                	sub    dh,BYTE PTR [rbx]
+ b42:	24 22                	and    al,0x22
+ b44:	00 00                	add    BYTE PTR [rax],al
+ b46:	00 00                	add    BYTE PTR [rax],al
+ b48:	14 00                	adc    al,0x0
+ b4a:	00 00                	add    BYTE PTR [rax],al
+ b4c:	44 00 00             	add    BYTE PTR [rax],r8b
+ b4f:	00 90 fb ff ff 08    	add    BYTE PTR [rax+0x8fffffb],dl
+	...
+ b5d:	00 00                	add    BYTE PTR [rax],al
+ b5f:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+ b62:	00 00                	add    BYTE PTR [rax],al
+ b64:	5c                   	pop    rsp
+ b65:	00 00                	add    BYTE PTR [rax],al
+ b67:	00 92 fc ff ff a7    	add    BYTE PTR [rdx-0x58000004],dl
+ b6d:	00 00                	add    BYTE PTR [rax],al
+ b6f:	00 00                	add    BYTE PTR [rax],al
+ b71:	41 0e                	rex.B (bad) 
+ b73:	10 86 02 43 0d 06    	adc    BYTE PTR [rsi+0x60d4302],al
+ b79:	02 a2 0c 07 08 00    	add    ah,BYTE PTR [rdx+0x8070c]
+ b7f:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+ b82:	00 00                	add    BYTE PTR [rax],al
+ b84:	7c 00                	jl     b86 <__cxa_finalize@plt+0x4a6>
+ b86:	00 00                	add    BYTE PTR [rax],al
+ b88:	19 fd                	sbb    ebp,edi
+ b8a:	ff                   	(bad)  
+ b8b:	ff 33                	push   QWORD PTR [rbx]
+ b8d:	01 00                	add    DWORD PTR [rax],eax
+ b8f:	00 00                	add    BYTE PTR [rax],al
+ b91:	41 0e                	rex.B (bad) 
+ b93:	10 86 02 43 0d 06    	adc    BYTE PTR [rsi+0x60d4302],al
+ b99:	03 2e                	add    ebp,DWORD PTR [rsi]
+ b9b:	01 0c 07             	add    DWORD PTR [rdi+rax*1],ecx
+ b9e:	08 00                	or     BYTE PTR [rax],al
+ ba0:	44 00 00             	add    BYTE PTR [rax],r8b
+ ba3:	00 9c 00 00 00 38 fe 	add    BYTE PTR [rax+rax*1-0x1c80000],bl
+ baa:	ff                   	(bad)  
+ bab:	ff 65 00             	jmp    QWORD PTR [rbp+0x0]
+ bae:	00 00                	add    BYTE PTR [rax],al
+ bb0:	00 42 0e             	add    BYTE PTR [rdx+0xe],al
+ bb3:	10 8f 02 42 0e 18    	adc    BYTE PTR [rdi+0x180e4202],cl
+ bb9:	8e 03                	mov    es,WORD PTR [rbx]
+ bbb:	45 0e                	rex.RB (bad) 
+ bbd:	20 8d 04 42 0e 28    	and    BYTE PTR [rbp+0x280e4204],cl
+ bc3:	8c 05 48 0e 30 86    	mov    WORD PTR [rip+0xffffffff86300e48],es        # ffffffff86301a11 <__cxa_finalize@plt+0xffffffff86301331>
+ bc9:	06                   	(bad)  
+ bca:	48 0e                	rex.W (bad) 
+ bcc:	38 83 07 4d 0e 40    	cmp    BYTE PTR [rbx+0x400e4d07],al
+ bd2:	72 0e                	jb     be2 <__cxa_finalize@plt+0x502>
+ bd4:	38 41 0e             	cmp    BYTE PTR [rcx+0xe],al
+ bd7:	30 41 0e             	xor    BYTE PTR [rcx+0xe],al
+ bda:	28 42 0e             	sub    BYTE PTR [rdx+0xe],al
+ bdd:	20 42 0e             	and    BYTE PTR [rdx+0xe],al
+ be0:	18 42 0e             	sbb    BYTE PTR [rdx+0xe],al
+ be3:	10 42 0e             	adc    BYTE PTR [rdx+0xe],al
+ be6:	08 00                	or     BYTE PTR [rax],al
+ be8:	10 00                	adc    BYTE PTR [rax],al
+ bea:	00 00                	add    BYTE PTR [rax],al
+ bec:	e4 00                	in     al,0x0
+ bee:	00 00                	add    BYTE PTR [rax],al
+ bf0:	60                   	(bad)  
+ bf1:	fe                   	(bad)  
+ bf2:	ff                   	(bad)  
+ bf3:	ff 02                	inc    DWORD PTR [rdx]
+	...
+
+Disassembly of section .init_array:
+
+0000000000200d90 <.init_array>:
+  200d90:	f0 07                	lock (bad) 
+  200d92:	00 00                	add    BYTE PTR [rax],al
+  200d94:	00 00                	add    BYTE PTR [rax],al
+	...
+
+Disassembly of section .fini_array:
+
+0000000000200d98 <.fini_array>:
+  200d98:	b0 07                	mov    al,0x7
+  200d9a:	00 00                	add    BYTE PTR [rax],al
+  200d9c:	00 00                	add    BYTE PTR [rax],al
+	...
+
+Disassembly of section .dynamic:
+
+0000000000200da0 <.dynamic>:
+  200da0:	01 00                	add    DWORD PTR [rax],eax
+  200da2:	00 00                	add    BYTE PTR [rax],al
+  200da4:	00 00                	add    BYTE PTR [rax],al
+  200da6:	00 00                	add    BYTE PTR [rax],al
+  200da8:	01 00                	add    DWORD PTR [rax],eax
+  200daa:	00 00                	add    BYTE PTR [rax],al
+  200dac:	00 00                	add    BYTE PTR [rax],al
+  200dae:	00 00                	add    BYTE PTR [rax],al
+  200db0:	0c 00                	or     al,0x0
+  200db2:	00 00                	add    BYTE PTR [rax],al
+  200db4:	00 00                	add    BYTE PTR [rax],al
+  200db6:	00 00                	add    BYTE PTR [rax],al
+  200db8:	50                   	push   rax
+  200db9:	06                   	(bad)  
+  200dba:	00 00                	add    BYTE PTR [rax],al
+  200dbc:	00 00                	add    BYTE PTR [rax],al
+  200dbe:	00 00                	add    BYTE PTR [rax],al
+  200dc0:	0d 00 00 00 00       	or     eax,0x0
+  200dc5:	00 00                	add    BYTE PTR [rax],al
+  200dc7:	00 54 0a 00          	add    BYTE PTR [rdx+rcx*1+0x0],dl
+  200dcb:	00 00                	add    BYTE PTR [rax],al
+  200dcd:	00 00                	add    BYTE PTR [rax],al
+  200dcf:	00 19                	add    BYTE PTR [rcx],bl
+  200dd1:	00 00                	add    BYTE PTR [rax],al
+  200dd3:	00 00                	add    BYTE PTR [rax],al
+  200dd5:	00 00                	add    BYTE PTR [rax],al
+  200dd7:	00 90 0d 20 00 00    	add    BYTE PTR [rax+0x200d],dl
+  200ddd:	00 00                	add    BYTE PTR [rax],al
+  200ddf:	00 1b                	add    BYTE PTR [rbx],bl
+  200de1:	00 00                	add    BYTE PTR [rax],al
+  200de3:	00 00                	add    BYTE PTR [rax],al
+  200de5:	00 00                	add    BYTE PTR [rax],al
+  200de7:	00 08                	add    BYTE PTR [rax],cl
+  200de9:	00 00                	add    BYTE PTR [rax],al
+  200deb:	00 00                	add    BYTE PTR [rax],al
+  200ded:	00 00                	add    BYTE PTR [rax],al
+  200def:	00 1a                	add    BYTE PTR [rdx],bl
+  200df1:	00 00                	add    BYTE PTR [rax],al
+  200df3:	00 00                	add    BYTE PTR [rax],al
+  200df5:	00 00                	add    BYTE PTR [rax],al
+  200df7:	00 98 0d 20 00 00    	add    BYTE PTR [rax+0x200d],bl
+  200dfd:	00 00                	add    BYTE PTR [rax],al
+  200dff:	00 1c 00             	add    BYTE PTR [rax+rax*1],bl
+  200e02:	00 00                	add    BYTE PTR [rax],al
+  200e04:	00 00                	add    BYTE PTR [rax],al
+  200e06:	00 00                	add    BYTE PTR [rax],al
+  200e08:	08 00                	or     BYTE PTR [rax],al
+  200e0a:	00 00                	add    BYTE PTR [rax],al
+  200e0c:	00 00                	add    BYTE PTR [rax],al
+  200e0e:	00 00                	add    BYTE PTR [rax],al
+  200e10:	f5                   	cmc    
+  200e11:	fe                   	(bad)  
+  200e12:	ff 6f 00             	jmp    FWORD PTR [rdi+0x0]
+  200e15:	00 00                	add    BYTE PTR [rax],al
+  200e17:	00 98 02 00 00 00    	add    BYTE PTR [rax+0x2],bl
+  200e1d:	00 00                	add    BYTE PTR [rax],al
+  200e1f:	00 05 00 00 00 00    	add    BYTE PTR [rip+0x0],al        # 200e25 <__cxa_finalize@plt+0x200745>
+  200e25:	00 00                	add    BYTE PTR [rax],al
+  200e27:	00 d8                	add    al,bl
+  200e29:	03 00                	add    eax,DWORD PTR [rax]
+  200e2b:	00 00                	add    BYTE PTR [rax],al
+  200e2d:	00 00                	add    BYTE PTR [rax],al
+  200e2f:	00 06                	add    BYTE PTR [rsi],al
+  200e31:	00 00                	add    BYTE PTR [rax],al
+  200e33:	00 00                	add    BYTE PTR [rax],al
+  200e35:	00 00                	add    BYTE PTR [rax],al
+  200e37:	00 b8 02 00 00 00    	add    BYTE PTR [rax+0x2],bh
+  200e3d:	00 00                	add    BYTE PTR [rax],al
+  200e3f:	00 0a                	add    BYTE PTR [rdx],cl
+  200e41:	00 00                	add    BYTE PTR [rax],al
+  200e43:	00 00                	add    BYTE PTR [rax],al
+  200e45:	00 00                	add    BYTE PTR [rax],al
+  200e47:	00 c9                	add    cl,cl
+  200e49:	00 00                	add    BYTE PTR [rax],al
+  200e4b:	00 00                	add    BYTE PTR [rax],al
+  200e4d:	00 00                	add    BYTE PTR [rax],al
+  200e4f:	00 0b                	add    BYTE PTR [rbx],cl
+  200e51:	00 00                	add    BYTE PTR [rax],al
+  200e53:	00 00                	add    BYTE PTR [rax],al
+  200e55:	00 00                	add    BYTE PTR [rax],al
+  200e57:	00 18                	add    BYTE PTR [rax],bl
+  200e59:	00 00                	add    BYTE PTR [rax],al
+  200e5b:	00 00                	add    BYTE PTR [rax],al
+  200e5d:	00 00                	add    BYTE PTR [rax],al
+  200e5f:	00 15 00 00 00 00    	add    BYTE PTR [rip+0x0],dl        # 200e65 <__cxa_finalize@plt+0x200785>
+	...
+  200e6d:	00 00                	add    BYTE PTR [rax],al
+  200e6f:	00 03                	add    BYTE PTR [rbx],al
+  200e71:	00 00                	add    BYTE PTR [rax],al
+  200e73:	00 00                	add    BYTE PTR [rax],al
+  200e75:	00 00                	add    BYTE PTR [rax],al
+  200e77:	00 90 0f 20 00 00    	add    BYTE PTR [rax+0x200f],dl
+  200e7d:	00 00                	add    BYTE PTR [rax],al
+  200e7f:	00 02                	add    BYTE PTR [rdx],al
+  200e81:	00 00                	add    BYTE PTR [rax],al
+  200e83:	00 00                	add    BYTE PTR [rax],al
+  200e85:	00 00                	add    BYTE PTR [rax],al
+  200e87:	00 90 00 00 00 00    	add    BYTE PTR [rax+0x0],dl
+  200e8d:	00 00                	add    BYTE PTR [rax],al
+  200e8f:	00 14 00             	add    BYTE PTR [rax+rax*1],dl
+  200e92:	00 00                	add    BYTE PTR [rax],al
+  200e94:	00 00                	add    BYTE PTR [rax],al
+  200e96:	00 00                	add    BYTE PTR [rax],al
+  200e98:	07                   	(bad)  
+  200e99:	00 00                	add    BYTE PTR [rax],al
+  200e9b:	00 00                	add    BYTE PTR [rax],al
+  200e9d:	00 00                	add    BYTE PTR [rax],al
+  200e9f:	00 17                	add    BYTE PTR [rdi],dl
+  200ea1:	00 00                	add    BYTE PTR [rax],al
+  200ea3:	00 00                	add    BYTE PTR [rax],al
+  200ea5:	00 00                	add    BYTE PTR [rax],al
+  200ea7:	00 c0                	add    al,al
+  200ea9:	05 00 00 00 00       	add    eax,0x0
+  200eae:	00 00                	add    BYTE PTR [rax],al
+  200eb0:	07                   	(bad)  
+	...
+  200eb9:	05 00 00 00 00       	add    eax,0x0
+  200ebe:	00 00                	add    BYTE PTR [rax],al
+  200ec0:	08 00                	or     BYTE PTR [rax],al
+  200ec2:	00 00                	add    BYTE PTR [rax],al
+  200ec4:	00 00                	add    BYTE PTR [rax],al
+  200ec6:	00 00                	add    BYTE PTR [rax],al
+  200ec8:	c0 00 00             	rol    BYTE PTR [rax],0x0
+  200ecb:	00 00                	add    BYTE PTR [rax],al
+  200ecd:	00 00                	add    BYTE PTR [rax],al
+  200ecf:	00 09                	add    BYTE PTR [rcx],cl
+  200ed1:	00 00                	add    BYTE PTR [rax],al
+  200ed3:	00 00                	add    BYTE PTR [rax],al
+  200ed5:	00 00                	add    BYTE PTR [rax],al
+  200ed7:	00 18                	add    BYTE PTR [rax],bl
+  200ed9:	00 00                	add    BYTE PTR [rax],al
+  200edb:	00 00                	add    BYTE PTR [rax],al
+  200edd:	00 00                	add    BYTE PTR [rax],al
+  200edf:	00 1e                	add    BYTE PTR [rsi],bl
+  200ee1:	00 00                	add    BYTE PTR [rax],al
+  200ee3:	00 00                	add    BYTE PTR [rax],al
+  200ee5:	00 00                	add    BYTE PTR [rax],al
+  200ee7:	00 08                	add    BYTE PTR [rax],cl
+  200ee9:	00 00                	add    BYTE PTR [rax],al
+  200eeb:	00 00                	add    BYTE PTR [rax],al
+  200eed:	00 00                	add    BYTE PTR [rax],al
+  200eef:	00 fb                	add    bl,bh
+  200ef1:	ff                   	(bad)  
+  200ef2:	ff 6f 00             	jmp    FWORD PTR [rdi+0x0]
+  200ef5:	00 00                	add    BYTE PTR [rax],al
+  200ef7:	00 01                	add    BYTE PTR [rcx],al
+  200ef9:	00 00                	add    BYTE PTR [rax],al
+  200efb:	08 00                	or     BYTE PTR [rax],al
+  200efd:	00 00                	add    BYTE PTR [rax],al
+  200eff:	00 fe                	add    dh,bh
+  200f01:	ff                   	(bad)  
+  200f02:	ff 6f 00             	jmp    FWORD PTR [rdi+0x0]
+  200f05:	00 00                	add    BYTE PTR [rax],al
+  200f07:	00 c0                	add    al,al
+  200f09:	04 00                	add    al,0x0
+  200f0b:	00 00                	add    BYTE PTR [rax],al
+  200f0d:	00 00                	add    BYTE PTR [rax],al
+  200f0f:	00 ff                	add    bh,bh
+  200f11:	ff                   	(bad)  
+  200f12:	ff 6f 00             	jmp    FWORD PTR [rdi+0x0]
+  200f15:	00 00                	add    BYTE PTR [rax],al
+  200f17:	00 01                	add    BYTE PTR [rcx],al
+  200f19:	00 00                	add    BYTE PTR [rax],al
+  200f1b:	00 00                	add    BYTE PTR [rax],al
+  200f1d:	00 00                	add    BYTE PTR [rax],al
+  200f1f:	00 f0                	add    al,dh
+  200f21:	ff                   	(bad)  
+  200f22:	ff 6f 00             	jmp    FWORD PTR [rdi+0x0]
+  200f25:	00 00                	add    BYTE PTR [rax],al
+  200f27:	00 a2 04 00 00 00    	add    BYTE PTR [rdx+0x4],ah
+  200f2d:	00 00                	add    BYTE PTR [rax],al
+  200f2f:	00 f9                	add    cl,bh
+  200f31:	ff                   	(bad)  
+  200f32:	ff 6f 00             	jmp    FWORD PTR [rdi+0x0]
+  200f35:	00 00                	add    BYTE PTR [rax],al
+  200f37:	00 03                	add    BYTE PTR [rbx],al
+	...
+
+Disassembly of section .got:
+
+0000000000200f90 <.got>:
+  200f90:	a0 0d 20 00 00 00 00 	movabs al,ds:0x200d
+  200f97:	00 00 
+	...
+  200fa5:	00 00                	add    BYTE PTR [rax],al
+  200fa7:	00 86 06 00 00 00    	add    BYTE PTR [rsi+0x6],al
+  200fad:	00 00                	add    BYTE PTR [rax],al
+  200faf:	00 96 06 00 00 00    	add    BYTE PTR [rsi+0x6],dl
+  200fb5:	00 00                	add    BYTE PTR [rax],al
+  200fb7:	00 a6 06 00 00 00    	add    BYTE PTR [rsi+0x6],ah
+  200fbd:	00 00                	add    BYTE PTR [rax],al
+  200fbf:	00 b6 06 00 00 00    	add    BYTE PTR [rsi+0x6],dh
+  200fc5:	00 00                	add    BYTE PTR [rax],al
+  200fc7:	00 c6                	add    dh,al
+  200fc9:	06                   	(bad)  
+  200fca:	00 00                	add    BYTE PTR [rax],al
+  200fcc:	00 00                	add    BYTE PTR [rax],al
+  200fce:	00 00                	add    BYTE PTR [rax],al
+  200fd0:	d6                   	(bad)  
+  200fd1:	06                   	(bad)  
+	...
+
+Disassembly of section .data:
+
+0000000000201000 <.data>:
+	...
+  201008:	08 10                	or     BYTE PTR [rax],dl
+  20100a:	20 00                	and    BYTE PTR [rax],al
+	...
+  201020:	77 00                	ja     201022 <__cxa_finalize@plt+0x200942>
+  201022:	00 00                	add    BYTE PTR [rax],al
+  201024:	66 00 00             	data16 add BYTE PTR [rax],al
+  201027:	00 7b 00             	add    BYTE PTR [rbx+0x0],bh
+  20102a:	00 00                	add    BYTE PTR [rax],al
+  20102c:	5f                   	pop    rdi
+  20102d:	00 00                	add    BYTE PTR [rax],al
+  20102f:	00 6e 00             	add    BYTE PTR [rsi+0x0],ch
+  201032:	00 00                	add    BYTE PTR [rax],al
+  201034:	79 00                	jns    201036 <__cxa_finalize@plt+0x200956>
+  201036:	00 00                	add    BYTE PTR [rax],al
+  201038:	7d 00                	jge    20103a <__cxa_finalize@plt+0x20095a>
+  20103a:	00 00                	add    BYTE PTR [rax],al
+  20103c:	ff                   	(bad)  
+  20103d:	ff                   	(bad)  
+  20103e:	ff                   	(bad)  
+  20103f:	ff 62 00             	jmp    QWORD PTR [rdx+0x0]
+  201042:	00 00                	add    BYTE PTR [rax],al
+  201044:	6c                   	ins    BYTE PTR es:[rdi],dx
+  201045:	00 00                	add    BYTE PTR [rax],al
+  201047:	00 72 00             	add    BYTE PTR [rdx+0x0],dh
+  20104a:	00 00                	add    BYTE PTR [rax],al
+  20104c:	ff                   	(bad)  
+  20104d:	ff                   	(bad)  
+  20104e:	ff                   	(bad)  
+  20104f:	ff                   	(bad)  
+  201050:	ff                   	(bad)  
+  201051:	ff                   	(bad)  
+  201052:	ff                   	(bad)  
+  201053:	ff                   	(bad)  
+  201054:	ff                   	(bad)  
+  201055:	ff                   	(bad)  
+  201056:	ff                   	(bad)  
+  201057:	ff                   	(bad)  
+  201058:	ff                   	(bad)  
+  201059:	ff                   	(bad)  
+  20105a:	ff                   	(bad)  
+  20105b:	ff                   	(bad)  
+  20105c:	ff                   	(bad)  
+  20105d:	ff                   	(bad)  
+  20105e:	ff                   	(bad)  
+  20105f:	ff                   	(bad)  
+  201060:	ff                   	(bad)  
+  201061:	ff                   	(bad)  
+  201062:	ff                   	(bad)  
+  201063:	ff 61 00             	jmp    QWORD PTR [rcx+0x0]
+  201066:	00 00                	add    BYTE PTR [rax],al
+  201068:	65 00 00             	add    BYTE PTR gs:[rax],al
+  20106b:	00 69 00             	add    BYTE PTR [rcx+0x0],ch
+  20106e:	00 00                	add    BYTE PTR [rax],al
+  201070:	ff                   	(bad)  
+  201071:	ff                   	(bad)  
+  201072:	ff                   	(bad)  
+  201073:	ff 6f 00             	jmp    FWORD PTR [rdi+0x0]
+  201076:	00 00                	add    BYTE PTR [rax],al
+  201078:	74 00                	je     20107a <__cxa_finalize@plt+0x20099a>
+  20107a:	00 00                	add    BYTE PTR [rax],al
+  20107c:	ff                   	(bad)  
+  20107d:	ff                   	(bad)  
+  20107e:	ff                   	(bad)  
+  20107f:	ff                   	(bad)  
+  201080:	ff                   	(bad)  
+  201081:	ff                   	(bad)  
+  201082:	ff                   	(bad)  
+  201083:	ff                   	(bad)  
+  201084:	ff                   	(bad)  
+  201085:	ff                   	(bad)  
+  201086:	ff                   	(bad)  
+  201087:	ff                   	(bad)  
+  201088:	ff                   	(bad)  
+  201089:	ff                   	(bad)  
+  20108a:	ff                   	(bad)  
+  20108b:	ff                   	(bad)  
+  20108c:	ff                   	(bad)  
+  20108d:	ff                   	(bad)  
+  20108e:	ff                   	(bad)  
+  20108f:	ff                   	(bad)  
+  201090:	ff                   	(bad)  
+  201091:	ff                   	(bad)  
+  201092:	ff                   	(bad)  
+  201093:	ff                   	(bad)  
+  201094:	ff                   	(bad)  
+  201095:	ff                   	(bad)  
+  201096:	ff                   	(bad)  
+  201097:	ff                   	(bad)  
+  201098:	ff                   	(bad)  
+  201099:	ff                   	(bad)  
+  20109a:	ff                   	(bad)  
+  20109b:	ff                   	(bad)  
+  20109c:	ff                   	(bad)  
+  20109d:	ff                   	(bad)  
+  20109e:	ff                   	(bad)  
+  20109f:	ff                   	(bad)  
+  2010a0:	ff                   	(bad)  
+  2010a1:	ff                   	(bad)  
+  2010a2:	ff                   	(bad)  
+  2010a3:	ff                   	(bad)  
+  2010a4:	ff                   	(bad)  
+  2010a5:	ff                   	(bad)  
+  2010a6:	ff                   	(bad)  
+  2010a7:	ff                   	(bad)  
+  2010a8:	ff                   	(bad)  
+  2010a9:	ff                   	(bad)  
+  2010aa:	ff                   	(bad)  
+  2010ab:	ff                   	(bad)  
+  2010ac:	ff                   	(bad)  
+  2010ad:	ff                   	(bad)  
+  2010ae:	ff                   	(bad)  
+  2010af:	ff                   	(bad)  
+  2010b0:	ff                   	(bad)  
+  2010b1:	ff                   	(bad)  
+  2010b2:	ff                   	(bad)  
+  2010b3:	ff                   	(bad)  
+  2010b4:	ff                   	(bad)  
+  2010b5:	ff                   	(bad)  
+  2010b6:	ff                   	(bad)  
+  2010b7:	ff                   	(bad)  
+  2010b8:	ff                   	(bad)  
+  2010b9:	ff                   	(bad)  
+  2010ba:	ff                   	(bad)  
+  2010bb:	ff 67 00             	jmp    QWORD PTR [rdi+0x0]
+  2010be:	00 00                	add    BYTE PTR [rax],al
+  2010c0:	ff                   	(bad)  
+  2010c1:	ff                   	(bad)  
+  2010c2:	ff                   	(bad)  
+  2010c3:	ff                   	(bad)  
+  2010c4:	ff                   	(bad)  
+  2010c5:	ff                   	(bad)  
+  2010c6:	ff                   	(bad)  
+  2010c7:	ff                   	(bad)  
+  2010c8:	ff                   	(bad)  
+  2010c9:	ff                   	(bad)  
+  2010ca:	ff                   	(bad)  
+  2010cb:	ff                   	(bad)  
+  2010cc:	ff                   	(bad)  
+  2010cd:	ff                   	(bad)  
+  2010ce:	ff                   	(bad)  
+  2010cf:	ff                   	(bad)  
+  2010d0:	ff                   	(bad)  
+  2010d1:	ff                   	(bad)  
+  2010d2:	ff                   	(bad)  
+  2010d3:	ff                   	(bad)  
+  2010d4:	ff                   	(bad)  
+  2010d5:	ff                   	(bad)  
+  2010d6:	ff                   	(bad)  
+  2010d7:	ff 75 00             	push   QWORD PTR [rbp+0x0]
+  2010da:	00 00                	add    BYTE PTR [rax],al
+  2010dc:	ff                   	(bad)  
+  2010dd:	ff                   	(bad)  
+  2010de:	ff                   	(bad)  
+  2010df:	ff                   	(bad)  
+  2010e0:	ff                   	(bad)  
+  2010e1:	ff                   	(bad)  
+  2010e2:	ff                   	(bad)  
+  2010e3:	ff                   	(bad)  
+  2010e4:	ff                   	(bad)  
+  2010e5:	ff                   	(bad)  
+  2010e6:	ff                   	(bad)  
+  2010e7:	ff                   	(bad)  
+  2010e8:	ff                   	(bad)  
+  2010e9:	ff                   	(bad)  
+  2010ea:	ff                   	(bad)  
+  2010eb:	ff                   	(bad)  
+  2010ec:	ff                   	(bad)  
+  2010ed:	ff                   	(bad)  
+  2010ee:	ff                   	(bad)  
+  2010ef:	ff                   	(bad)  
+  2010f0:	ff                   	(bad)  
+  2010f1:	ff                   	(bad)  
+  2010f2:	ff                   	(bad)  
+  2010f3:	ff                   	(bad)  
+  2010f4:	ff                   	(bad)  
+  2010f5:	ff                   	(bad)  
+  2010f6:	ff                   	(bad)  
+  2010f7:	ff                   	(bad)  
+  2010f8:	ff                   	(bad)  
+  2010f9:	ff                   	(bad)  
+  2010fa:	ff                   	(bad)  
+  2010fb:	ff                   	(bad)  
+  2010fc:	ff                   	(bad)  
+  2010fd:	ff                   	(bad)  
+  2010fe:	ff                   	(bad)  
+  2010ff:	ff                   	(bad)  
+  201100:	ff                   	(bad)  
+  201101:	ff                   	(bad)  
+  201102:	ff                   	(bad)  
+  201103:	ff                   	(bad)  
+  201104:	ff                   	(bad)  
+  201105:	ff                   	(bad)  
+  201106:	ff                   	(bad)  
+  201107:	ff                   	(bad)  
+  201108:	ff                   	(bad)  
+  201109:	ff                   	(bad)  
+  20110a:	ff                   	(bad)  
+  20110b:	ff                   	(bad)  
+  20110c:	ff                   	(bad)  
+  20110d:	ff                   	(bad)  
+  20110e:	ff                   	(bad)  
+  20110f:	ff                   	(bad)  
+  201110:	ff                   	(bad)  
+  201111:	ff                   	(bad)  
+  201112:	ff                   	(bad)  
+  201113:	ff                   	(bad)  
+  201114:	ff                   	(bad)  
+  201115:	ff                   	(bad)  
+  201116:	ff                   	(bad)  
+  201117:	ff                   	(bad)  
+  201118:	ff                   	(bad)  
+  201119:	ff                   	(bad)  
+  20111a:	ff                   	(bad)  
+  20111b:	ff                   	(bad)  
+  20111c:	ff                   	(bad)  
+  20111d:	ff                   	(bad)  
+  20111e:	ff                   	(bad)  
+  20111f:	ff                   	(bad)  
+  201120:	ff                   	(bad)  
+  201121:	ff                   	(bad)  
+  201122:	ff                   	(bad)  
+  201123:	ff                   	(bad)  
+  201124:	ff                   	(bad)  
+  201125:	ff                   	(bad)  
+  201126:	ff                   	(bad)  
+  201127:	ff                   	(bad)  
+  201128:	ff                   	(bad)  
+  201129:	ff                   	(bad)  
+  20112a:	ff                   	(bad)  
+  20112b:	ff                   	(bad)  
+  20112c:	ff                   	(bad)  
+  20112d:	ff                   	(bad)  
+  20112e:	ff                   	(bad)  
+  20112f:	ff                   	(bad)  
+  201130:	ff                   	(bad)  
+  201131:	ff                   	(bad)  
+  201132:	ff                   	(bad)  
+  201133:	ff                   	(bad)  
+  201134:	ff                   	(bad)  
+  201135:	ff                   	(bad)  
+  201136:	ff                   	(bad)  
+  201137:	ff                   	(bad)  
+  201138:	ff                   	(bad)  
+  201139:	ff                   	(bad)  
+  20113a:	ff                   	(bad)  
+  20113b:	ff                   	(bad)  
+  20113c:	ff                   	(bad)  
+  20113d:	ff                   	(bad)  
+  20113e:	ff                   	(bad)  
+  20113f:	ff                   	(bad)  
+  201140:	ff                   	(bad)  
+  201141:	ff                   	(bad)  
+  201142:	ff                   	(bad)  
+  201143:	ff                   	(bad)  
+  201144:	ff                   	(bad)  
+  201145:	ff                   	(bad)  
+  201146:	ff                   	(bad)  
+  201147:	ff                   	(bad)  
+  201148:	ff                   	(bad)  
+  201149:	ff                   	(bad)  
+  20114a:	ff                   	(bad)  
+  20114b:	ff                   	(bad)  
+  20114c:	ff                   	(bad)  
+  20114d:	ff                   	(bad)  
+  20114e:	ff                   	(bad)  
+  20114f:	ff                   	(bad)  
+  201150:	ff                   	(bad)  
+  201151:	ff                   	(bad)  
+  201152:	ff                   	(bad)  
+  201153:	ff                   	(bad)  
+  201154:	ff                   	(bad)  
+  201155:	ff                   	(bad)  
+  201156:	ff                   	(bad)  
+  201157:	ff                   	(bad)  
+  201158:	ff                   	(bad)  
+  201159:	ff                   	(bad)  
+  20115a:	ff                   	(bad)  
+  20115b:	ff                   	(bad)  
+  20115c:	ff                   	(bad)  
+  20115d:	ff                   	(bad)  
+  20115e:	ff                   	(bad)  
+  20115f:	ff                   	(bad)  
+  201160:	ff                   	(bad)  
+  201161:	ff                   	(bad)  
+  201162:	ff                   	(bad)  
+  201163:	ff                   	(bad)  
+  201164:	ff                   	(bad)  
+  201165:	ff                   	(bad)  
+  201166:	ff                   	(bad)  
+  201167:	ff                   	(bad)  
+  201168:	ff                   	(bad)  
+  201169:	ff                   	(bad)  
+  20116a:	ff                   	(bad)  
+  20116b:	ff                   	(bad)  
+  20116c:	ff                   	(bad)  
+  20116d:	ff                   	(bad)  
+  20116e:	ff                   	(bad)  
+  20116f:	ff                   	(bad)  
+  201170:	ff                   	(bad)  
+  201171:	ff                   	(bad)  
+  201172:	ff                   	(bad)  
+  201173:	ff                   	(bad)  
+  201174:	ff                   	(bad)  
+  201175:	ff                   	(bad)  
+  201176:	ff                   	(bad)  
+  201177:	ff                   	(bad)  
+  201178:	ff                   	(bad)  
+  201179:	ff                   	(bad)  
+  20117a:	ff                   	(bad)  
+  20117b:	ff                   	(bad)  
+  20117c:	ff                   	(bad)  
+  20117d:	ff                   	(bad)  
+  20117e:	ff                   	(bad)  
+  20117f:	ff                   	(bad)  
+  201180:	ff                   	(bad)  
+  201181:	ff                   	(bad)  
+  201182:	ff                   	(bad)  
+  201183:	ff                   	(bad)  
+  201184:	ff                   	(bad)  
+  201185:	ff                   	(bad)  
+  201186:	ff                   	(bad)  
+  201187:	ff                   	(bad)  
+  201188:	ff                   	(bad)  
+  201189:	ff                   	(bad)  
+  20118a:	ff                   	(bad)  
+  20118b:	ff                   	(bad)  
+  20118c:	ff                   	(bad)  
+  20118d:	ff                   	(bad)  
+  20118e:	ff                   	(bad)  
+  20118f:	ff                   	(bad)  
+  201190:	ff                   	(bad)  
+  201191:	ff                   	(bad)  
+  201192:	ff                   	(bad)  
+  201193:	ff                   	(bad)  
+  201194:	ff                   	(bad)  
+  201195:	ff                   	(bad)  
+  201196:	ff                   	(bad)  
+  201197:	ff                   	(bad)  
+  201198:	ff                   	(bad)  
+  201199:	ff                   	(bad)  
+  20119a:	ff                   	(bad)  
+  20119b:	ff                   	(bad)  
+  20119c:	ff                   	(bad)  
+  20119d:	ff                   	(bad)  
+  20119e:	ff                   	(bad)  
+  20119f:	ff                   	(bad)  
+  2011a0:	ff                   	(bad)  
+  2011a1:	ff                   	(bad)  
+  2011a2:	ff                   	(bad)  
+  2011a3:	ff                   	(bad)  
+  2011a4:	ff                   	(bad)  
+  2011a5:	ff                   	(bad)  
+  2011a6:	ff                   	(bad)  
+  2011a7:	ff                   	(bad)  
+  2011a8:	ff                   	(bad)  
+  2011a9:	ff                   	(bad)  
+  2011aa:	ff                   	(bad)  
+  2011ab:	ff                   	(bad)  
+  2011ac:	ff                   	(bad)  
+  2011ad:	ff                   	(bad)  
+  2011ae:	ff                   	(bad)  
+  2011af:	ff                   	(bad)  
+  2011b0:	ff                   	(bad)  
+  2011b1:	ff                   	(bad)  
+  2011b2:	ff                   	(bad)  
+  2011b3:	ff                   	(bad)  
+  2011b4:	ff                   	(bad)  
+  2011b5:	ff                   	(bad)  
+  2011b6:	ff                   	(bad)  
+  2011b7:	ff                   	(bad)  
+  2011b8:	ff                   	(bad)  
+  2011b9:	ff                   	(bad)  
+  2011ba:	ff                   	(bad)  
+  2011bb:	ff                   	(bad)  
+  2011bc:	ff                   	(bad)  
+  2011bd:	ff                   	(bad)  
+  2011be:	ff                   	(bad)  
+  2011bf:	ff                   	(bad)  
+  2011c0:	ff                   	(bad)  
+  2011c1:	ff                   	(bad)  
+  2011c2:	ff                   	(bad)  
+  2011c3:	ff                   	(bad)  
+  2011c4:	ff                   	(bad)  
+  2011c5:	ff                   	(bad)  
+  2011c6:	ff                   	(bad)  
+  2011c7:	ff                   	(bad)  
+  2011c8:	ff                   	(bad)  
+  2011c9:	ff                   	(bad)  
+  2011ca:	ff                   	(bad)  
+  2011cb:	ff                   	(bad)  
+  2011cc:	ff                   	(bad)  
+  2011cd:	ff                   	(bad)  
+  2011ce:	ff                   	(bad)  
+  2011cf:	ff                   	(bad)  
+  2011d0:	ff                   	(bad)  
+  2011d1:	ff                   	(bad)  
+  2011d2:	ff                   	(bad)  
+  2011d3:	ff                   	(bad)  
+  2011d4:	ff                   	(bad)  
+  2011d5:	ff                   	(bad)  
+  2011d6:	ff                   	(bad)  
+  2011d7:	ff                   	(bad)  
+  2011d8:	ff                   	(bad)  
+  2011d9:	ff                   	(bad)  
+  2011da:	ff                   	(bad)  
+  2011db:	ff                   	(bad)  
+  2011dc:	ff                   	(bad)  
+  2011dd:	ff                   	(bad)  
+  2011de:	ff                   	(bad)  
+  2011df:	ff                   	(bad)  
+  2011e0:	ff                   	(bad)  
+  2011e1:	ff                   	(bad)  
+  2011e2:	ff                   	(bad)  
+  2011e3:	ff                   	(bad)  
+  2011e4:	ff                   	(bad)  
+  2011e5:	ff                   	(bad)  
+  2011e6:	ff                   	(bad)  
+  2011e7:	ff                   	(bad)  
+  2011e8:	ff                   	(bad)  
+  2011e9:	ff                   	(bad)  
+  2011ea:	ff                   	(bad)  
+  2011eb:	ff                   	(bad)  
+  2011ec:	ff                   	(bad)  
+  2011ed:	ff                   	(bad)  
+  2011ee:	ff                   	(bad)  
+  2011ef:	ff                   	(bad)  
+  2011f0:	ff                   	(bad)  
+  2011f1:	ff                   	(bad)  
+  2011f2:	ff                   	(bad)  
+  2011f3:	ff                   	(bad)  
+  2011f4:	ff                   	(bad)  
+  2011f5:	ff                   	(bad)  
+  2011f6:	ff                   	(bad)  
+  2011f7:	ff                   	(bad)  
+  2011f8:	ff                   	(bad)  
+  2011f9:	ff                   	(bad)  
+  2011fa:	ff                   	(bad)  
+  2011fb:	ff                   	(bad)  
+  2011fc:	ff                   	(bad)  
+  2011fd:	ff                   	(bad)  
+  2011fe:	ff                   	(bad)  
+  2011ff:	ff                   	(bad)  
+  201200:	ff                   	(bad)  
+  201201:	ff                   	(bad)  
+  201202:	ff                   	(bad)  
+  201203:	ff                   	(bad)  
+  201204:	ff                   	(bad)  
+  201205:	ff                   	(bad)  
+  201206:	ff                   	(bad)  
+  201207:	ff                   	(bad)  
+  201208:	ff                   	(bad)  
+  201209:	ff                   	(bad)  
+  20120a:	ff                   	(bad)  
+  20120b:	ff                   	(bad)  
+  20120c:	ff                   	(bad)  
+  20120d:	ff                   	(bad)  
+  20120e:	ff                   	(bad)  
+  20120f:	ff                   	(bad)  
+  201210:	ff                   	(bad)  
+  201211:	ff                   	(bad)  
+  201212:	ff                   	(bad)  
+  201213:	ff                   	(bad)  
+  201214:	ff                   	(bad)  
+  201215:	ff                   	(bad)  
+  201216:	ff                   	(bad)  
+  201217:	ff                   	(bad)  
+  201218:	ff                   	(bad)  
+  201219:	ff                   	(bad)  
+  20121a:	ff                   	(bad)  
+  20121b:	ff                   	(bad)  
+  20121c:	ff                   	(bad)  
+  20121d:	ff                   	(bad)  
+  20121e:	ff                   	(bad)  
+  20121f:	ff                   	(bad)  
+  201220:	ff                   	(bad)  
+  201221:	ff                   	(bad)  
+  201222:	ff                   	(bad)  
+  201223:	ff                   	(bad)  
+  201224:	ff                   	(bad)  
+  201225:	ff                   	(bad)  
+  201226:	ff                   	(bad)  
+  201227:	ff                   	(bad)  
+  201228:	ff                   	(bad)  
+  201229:	ff                   	(bad)  
+  20122a:	ff                   	(bad)  
+  20122b:	ff                   	(bad)  
+  20122c:	ff                   	(bad)  
+  20122d:	ff                   	(bad)  
+  20122e:	ff                   	(bad)  
+  20122f:	ff                   	(bad)  
+  201230:	ff                   	(bad)  
+  201231:	ff                   	(bad)  
+  201232:	ff                   	(bad)  
+  201233:	ff                   	(bad)  
+  201234:	ff                   	(bad)  
+  201235:	ff                   	(bad)  
+  201236:	ff                   	(bad)  
+  201237:	ff                   	(bad)  
+  201238:	ff                   	(bad)  
+  201239:	ff                   	(bad)  
+  20123a:	ff                   	(bad)  
+  20123b:	ff                   	(bad)  
+  20123c:	ff                   	(bad)  
+  20123d:	ff                   	(bad)  
+  20123e:	ff                   	(bad)  
+  20123f:	ff                   	(bad)  
+  201240:	ff                   	(bad)  
+  201241:	ff                   	(bad)  
+  201242:	ff                   	(bad)  
+  201243:	ff                   	(bad)  
+  201244:	ff                   	(bad)  
+  201245:	ff                   	(bad)  
+  201246:	ff                   	(bad)  
+  201247:	ff                   	(bad)  
+  201248:	ff                   	(bad)  
+  201249:	ff                   	(bad)  
+  20124a:	ff                   	(bad)  
+  20124b:	ff                   	(bad)  
+  20124c:	ff                   	(bad)  
+  20124d:	ff                   	(bad)  
+  20124e:	ff                   	(bad)  
+  20124f:	ff                   	(bad)  
+  201250:	ff                   	(bad)  
+  201251:	ff                   	(bad)  
+  201252:	ff                   	(bad)  
+  201253:	ff                   	(bad)  
+  201254:	ff                   	(bad)  
+  201255:	ff                   	(bad)  
+  201256:	ff                   	(bad)  
+  201257:	ff                   	(bad)  
+  201258:	ff                   	(bad)  
+  201259:	ff                   	(bad)  
+  20125a:	ff                   	(bad)  
+  20125b:	ff                   	(bad)  
+  20125c:	ff                   	(bad)  
+  20125d:	ff                   	(bad)  
+  20125e:	ff                   	(bad)  
+  20125f:	ff                   	(bad)  
+  201260:	ff                   	(bad)  
+  201261:	ff                   	(bad)  
+  201262:	ff                   	(bad)  
+  201263:	ff                   	(bad)  
+  201264:	ff                   	(bad)  
+  201265:	ff                   	(bad)  
+  201266:	ff                   	(bad)  
+  201267:	ff                   	(bad)  
+  201268:	ff                   	(bad)  
+  201269:	ff                   	(bad)  
+  20126a:	ff                   	(bad)  
+  20126b:	ff                   	(bad)  
+  20126c:	ff                   	(bad)  
+  20126d:	ff                   	(bad)  
+  20126e:	ff                   	(bad)  
+  20126f:	ff                   	(bad)  
+  201270:	ff                   	(bad)  
+  201271:	ff                   	(bad)  
+  201272:	ff                   	(bad)  
+  201273:	ff                   	(bad)  
+  201274:	ff                   	(bad)  
+  201275:	ff                   	(bad)  
+  201276:	ff                   	(bad)  
+  201277:	ff                   	(bad)  
+  201278:	ff                   	(bad)  
+  201279:	ff                   	(bad)  
+  20127a:	ff                   	(bad)  
+  20127b:	ff                   	(bad)  
+  20127c:	ff                   	(bad)  
+  20127d:	ff                   	(bad)  
+  20127e:	ff                   	(bad)  
+  20127f:	ff                   	(bad)  
+  201280:	ff                   	(bad)  
+  201281:	ff                   	(bad)  
+  201282:	ff                   	(bad)  
+  201283:	ff                   	(bad)  
+  201284:	ff                   	(bad)  
+  201285:	ff                   	(bad)  
+  201286:	ff                   	(bad)  
+  201287:	ff                   	(bad)  
+  201288:	ff                   	(bad)  
+  201289:	ff                   	(bad)  
+  20128a:	ff                   	(bad)  
+  20128b:	ff                   	(bad)  
+  20128c:	ff                   	(bad)  
+  20128d:	ff                   	(bad)  
+  20128e:	ff                   	(bad)  
+  20128f:	ff                   	(bad)  
+  201290:	ff                   	(bad)  
+  201291:	ff                   	(bad)  
+  201292:	ff                   	(bad)  
+  201293:	ff                   	(bad)  
+  201294:	ff                   	(bad)  
+  201295:	ff                   	(bad)  
+  201296:	ff                   	(bad)  
+  201297:	ff                   	(bad)  
+  201298:	ff                   	(bad)  
+  201299:	ff                   	(bad)  
+  20129a:	ff                   	(bad)  
+  20129b:	ff                   	(bad)  
+  20129c:	ff                   	(bad)  
+  20129d:	ff                   	(bad)  
+  20129e:	ff                   	(bad)  
+  20129f:	ff                   	(bad)  
+  2012a0:	ff                   	(bad)  
+  2012a1:	ff                   	(bad)  
+  2012a2:	ff                   	(bad)  
+  2012a3:	ff                   	(bad)  
+  2012a4:	ff                   	(bad)  
+  2012a5:	ff                   	(bad)  
+  2012a6:	ff                   	(bad)  
+  2012a7:	ff                   	(bad)  
+  2012a8:	ff                   	(bad)  
+  2012a9:	ff                   	(bad)  
+  2012aa:	ff                   	(bad)  
+  2012ab:	ff                   	(bad)  
+  2012ac:	ff                   	(bad)  
+  2012ad:	ff                   	(bad)  
+  2012ae:	ff                   	(bad)  
+  2012af:	ff                   	(bad)  
+  2012b0:	ff                   	(bad)  
+  2012b1:	ff                   	(bad)  
+  2012b2:	ff                   	(bad)  
+  2012b3:	ff                   	(bad)  
+  2012b4:	ff                   	(bad)  
+  2012b5:	ff                   	(bad)  
+  2012b6:	ff                   	(bad)  
+  2012b7:	ff                   	(bad)  
+  2012b8:	ff                   	(bad)  
+  2012b9:	ff                   	(bad)  
+  2012ba:	ff                   	(bad)  
+  2012bb:	ff                   	(bad)  
+  2012bc:	ff                   	(bad)  
+  2012bd:	ff                   	(bad)  
+  2012be:	ff                   	(bad)  
+  2012bf:	ff                   	(bad)  
+  2012c0:	ff                   	(bad)  
+  2012c1:	ff                   	(bad)  
+  2012c2:	ff                   	(bad)  
+  2012c3:	ff                   	(bad)  
+  2012c4:	ff                   	(bad)  
+  2012c5:	ff                   	(bad)  
+  2012c6:	ff                   	(bad)  
+  2012c7:	ff                   	(bad)  
+  2012c8:	ff                   	(bad)  
+  2012c9:	ff                   	(bad)  
+  2012ca:	ff                   	(bad)  
+  2012cb:	ff                   	(bad)  
+  2012cc:	ff                   	(bad)  
+  2012cd:	ff                   	(bad)  
+  2012ce:	ff                   	(bad)  
+  2012cf:	ff                   	(bad)  
+  2012d0:	ff                   	(bad)  
+  2012d1:	ff                   	(bad)  
+  2012d2:	ff                   	(bad)  
+  2012d3:	ff                   	(bad)  
+  2012d4:	ff                   	(bad)  
+  2012d5:	ff                   	(bad)  
+  2012d6:	ff                   	(bad)  
+  2012d7:	ff                   	(bad)  
+  2012d8:	ff                   	(bad)  
+  2012d9:	ff                   	(bad)  
+  2012da:	ff                   	(bad)  
+  2012db:	ff                   	(bad)  
+  2012dc:	ff                   	(bad)  
+  2012dd:	ff                   	(bad)  
+  2012de:	ff                   	(bad)  
+  2012df:	ff                   	(bad)  
+  2012e0:	ff                   	(bad)  
+  2012e1:	ff                   	(bad)  
+  2012e2:	ff                   	(bad)  
+  2012e3:	ff                   	(bad)  
+  2012e4:	ff                   	(bad)  
+  2012e5:	ff                   	(bad)  
+  2012e6:	ff                   	(bad)  
+  2012e7:	ff                   	(bad)  
+  2012e8:	ff                   	(bad)  
+  2012e9:	ff                   	(bad)  
+  2012ea:	ff                   	(bad)  
+  2012eb:	ff                   	(bad)  
+  2012ec:	ff                   	(bad)  
+  2012ed:	ff                   	(bad)  
+  2012ee:	ff                   	(bad)  
+  2012ef:	ff                   	(bad)  
+  2012f0:	ff                   	(bad)  
+  2012f1:	ff                   	(bad)  
+  2012f2:	ff                   	(bad)  
+  2012f3:	ff                   	(bad)  
+  2012f4:	ff                   	(bad)  
+  2012f5:	ff                   	(bad)  
+  2012f6:	ff                   	(bad)  
+  2012f7:	ff                   	(bad)  
+  2012f8:	ff                   	(bad)  
+  2012f9:	ff                   	(bad)  
+  2012fa:	ff                   	(bad)  
+  2012fb:	ff                   	(bad)  
+  2012fc:	ff                   	(bad)  
+  2012fd:	ff                   	(bad)  
+  2012fe:	ff                   	(bad)  
+  2012ff:	ff                   	(bad)  
+  201300:	ff                   	(bad)  
+  201301:	ff                   	(bad)  
+  201302:	ff                   	(bad)  
+  201303:	ff                   	(bad)  
+  201304:	ff                   	(bad)  
+  201305:	ff                   	(bad)  
+  201306:	ff                   	(bad)  
+  201307:	ff                   	(bad)  
+  201308:	ff                   	(bad)  
+  201309:	ff                   	(bad)  
+  20130a:	ff                   	(bad)  
+  20130b:	ff                   	(bad)  
+  20130c:	ff                   	(bad)  
+  20130d:	ff                   	(bad)  
+  20130e:	ff                   	(bad)  
+  20130f:	ff                   	(bad)  
+  201310:	ff                   	(bad)  
+  201311:	ff                   	(bad)  
+  201312:	ff                   	(bad)  
+  201313:	ff                   	(bad)  
+  201314:	ff                   	(bad)  
+  201315:	ff                   	(bad)  
+  201316:	ff                   	(bad)  
+  201317:	ff                   	(bad)  
+  201318:	ff                   	(bad)  
+  201319:	ff                   	(bad)  
+  20131a:	ff                   	(bad)  
+  20131b:	ff                   	(bad)  
+  20131c:	ff                   	(bad)  
+  20131d:	ff                   	(bad)  
+  20131e:	ff                   	(bad)  
+  20131f:	ff                   	(bad)  
+  201320:	ff                   	(bad)  
+  201321:	ff                   	(bad)  
+  201322:	ff                   	(bad)  
+  201323:	ff                   	(bad)  
+  201324:	ff                   	(bad)  
+  201325:	ff                   	(bad)  
+  201326:	ff                   	(bad)  
+  201327:	ff                   	(bad)  
+  201328:	ff                   	(bad)  
+  201329:	ff                   	(bad)  
+  20132a:	ff                   	(bad)  
+  20132b:	ff                   	(bad)  
+  20132c:	ff                   	(bad)  
+  20132d:	ff                   	(bad)  
+  20132e:	ff                   	(bad)  
+  20132f:	ff                   	(bad)  
+  201330:	ff                   	(bad)  
+  201331:	ff                   	(bad)  
+  201332:	ff                   	(bad)  
+  201333:	ff                   	(bad)  
+  201334:	ff                   	(bad)  
+  201335:	ff                   	(bad)  
+  201336:	ff                   	(bad)  
+  201337:	ff                   	(bad)  
+  201338:	ff                   	(bad)  
+  201339:	ff                   	(bad)  
+  20133a:	ff                   	(bad)  
+  20133b:	ff                   	(bad)  
+  20133c:	ff                   	(bad)  
+  20133d:	ff                   	(bad)  
+  20133e:	ff                   	(bad)  
+  20133f:	ff                   	(bad)  
+  201340:	ff                   	(bad)  
+  201341:	ff                   	(bad)  
+  201342:	ff                   	(bad)  
+  201343:	ff                   	(bad)  
+  201344:	ff                   	(bad)  
+  201345:	ff                   	(bad)  
+  201346:	ff                   	(bad)  
+  201347:	ff                   	(bad)  
+  201348:	ff                   	(bad)  
+  201349:	ff                   	(bad)  
+  20134a:	ff                   	(bad)  
+  20134b:	ff                   	(bad)  
+  20134c:	ff                   	(bad)  
+  20134d:	ff                   	(bad)  
+  20134e:	ff                   	(bad)  
+  20134f:	ff                   	(bad)  
+  201350:	ff                   	(bad)  
+  201351:	ff                   	(bad)  
+  201352:	ff                   	(bad)  
+  201353:	ff                   	(bad)  
+  201354:	ff                   	(bad)  
+  201355:	ff                   	(bad)  
+  201356:	ff                   	(bad)  
+  201357:	ff                   	(bad)  
+  201358:	ff                   	(bad)  
+  201359:	ff                   	(bad)  
+  20135a:	ff                   	(bad)  
+  20135b:	ff                   	(bad)  
+  20135c:	ff                   	(bad)  
+  20135d:	ff                   	(bad)  
+  20135e:	ff                   	(bad)  
+  20135f:	ff                   	(bad)  
+  201360:	ff                   	(bad)  
+  201361:	ff                   	(bad)  
+  201362:	ff                   	(bad)  
+  201363:	ff                   	(bad)  
+  201364:	ff                   	(bad)  
+  201365:	ff                   	(bad)  
+  201366:	ff                   	(bad)  
+  201367:	ff                   	(bad)  
+  201368:	ff                   	(bad)  
+  201369:	ff                   	(bad)  
+  20136a:	ff                   	(bad)  
+  20136b:	ff                   	(bad)  
+  20136c:	ff                   	(bad)  
+  20136d:	ff                   	(bad)  
+  20136e:	ff                   	(bad)  
+  20136f:	ff                   	(bad)  
+  201370:	ff                   	(bad)  
+  201371:	ff                   	(bad)  
+  201372:	ff                   	(bad)  
+  201373:	ff                   	(bad)  
+  201374:	ff                   	(bad)  
+  201375:	ff                   	(bad)  
+  201376:	ff                   	(bad)  
+  201377:	ff                   	(bad)  
+  201378:	ff                   	(bad)  
+  201379:	ff                   	(bad)  
+  20137a:	ff                   	(bad)  
+  20137b:	ff                   	(bad)  
+  20137c:	ff                   	(bad)  
+  20137d:	ff                   	(bad)  
+  20137e:	ff                   	(bad)  
+  20137f:	ff                   	(bad)  
+  201380:	ff                   	(bad)  
+  201381:	ff                   	(bad)  
+  201382:	ff                   	(bad)  
+  201383:	ff                   	(bad)  
+  201384:	ff                   	(bad)  
+  201385:	ff                   	(bad)  
+  201386:	ff                   	(bad)  
+  201387:	ff                   	(bad)  
+  201388:	ff                   	(bad)  
+  201389:	ff                   	(bad)  
+  20138a:	ff                   	(bad)  
+  20138b:	ff                   	(bad)  
+  20138c:	ff                   	(bad)  
+  20138d:	ff                   	(bad)  
+  20138e:	ff                   	(bad)  
+  20138f:	ff                   	(bad)  
+  201390:	ff                   	(bad)  
+  201391:	ff                   	(bad)  
+  201392:	ff                   	(bad)  
+  201393:	ff                   	(bad)  
+  201394:	ff                   	(bad)  
+  201395:	ff                   	(bad)  
+  201396:	ff                   	(bad)  
+  201397:	ff                   	(bad)  
+  201398:	ff                   	(bad)  
+  201399:	ff                   	(bad)  
+  20139a:	ff                   	(bad)  
+  20139b:	ff                   	(bad)  
+  20139c:	ff                   	(bad)  
+  20139d:	ff                   	(bad)  
+  20139e:	ff                   	(bad)  
+  20139f:	ff                   	(bad)  
+  2013a0:	ff                   	(bad)  
+  2013a1:	ff                   	(bad)  
+  2013a2:	ff                   	(bad)  
+  2013a3:	ff                   	(bad)  
+  2013a4:	ff                   	(bad)  
+  2013a5:	ff                   	(bad)  
+  2013a6:	ff                   	(bad)  
+  2013a7:	ff                   	(bad)  
+  2013a8:	ff                   	(bad)  
+  2013a9:	ff                   	(bad)  
+  2013aa:	ff                   	(bad)  
+  2013ab:	ff                   	(bad)  
+  2013ac:	ff                   	(bad)  
+  2013ad:	ff                   	(bad)  
+  2013ae:	ff                   	(bad)  
+  2013af:	ff                   	(bad)  
+  2013b0:	ff                   	(bad)  
+  2013b1:	ff                   	(bad)  
+  2013b2:	ff                   	(bad)  
+  2013b3:	ff                   	(bad)  
+  2013b4:	ff                   	(bad)  
+  2013b5:	ff                   	(bad)  
+  2013b6:	ff                   	(bad)  
+  2013b7:	ff                   	(bad)  
+  2013b8:	ff                   	(bad)  
+  2013b9:	ff                   	(bad)  
+  2013ba:	ff                   	(bad)  
+  2013bb:	ff                   	(bad)  
+  2013bc:	ff                   	(bad)  
+  2013bd:	ff                   	(bad)  
+  2013be:	ff                   	(bad)  
+  2013bf:	ff                   	(bad)  
+  2013c0:	ff                   	(bad)  
+  2013c1:	ff                   	(bad)  
+  2013c2:	ff                   	(bad)  
+  2013c3:	ff                   	(bad)  
+  2013c4:	ff                   	(bad)  
+  2013c5:	ff                   	(bad)  
+  2013c6:	ff                   	(bad)  
+  2013c7:	ff                   	(bad)  
+  2013c8:	ff                   	(bad)  
+  2013c9:	ff                   	(bad)  
+  2013ca:	ff                   	(bad)  
+  2013cb:	ff                   	(bad)  
+  2013cc:	ff                   	(bad)  
+  2013cd:	ff                   	(bad)  
+  2013ce:	ff                   	(bad)  
+  2013cf:	ff                   	(bad)  
+  2013d0:	ff                   	(bad)  
+  2013d1:	ff                   	(bad)  
+  2013d2:	ff                   	(bad)  
+  2013d3:	ff                   	(bad)  
+  2013d4:	ff                   	(bad)  
+  2013d5:	ff                   	(bad)  
+  2013d6:	ff                   	(bad)  
+  2013d7:	ff                   	(bad)  
+  2013d8:	ff                   	(bad)  
+  2013d9:	ff                   	(bad)  
+  2013da:	ff                   	(bad)  
+  2013db:	ff                   	(bad)  
+  2013dc:	ff                   	(bad)  
+  2013dd:	ff                   	(bad)  
+  2013de:	ff                   	(bad)  
+  2013df:	ff                   	(bad)  
+  2013e0:	ff                   	(bad)  
+  2013e1:	ff                   	(bad)  
+  2013e2:	ff                   	(bad)  
+  2013e3:	ff                   	(bad)  
+  2013e4:	ff                   	(bad)  
+  2013e5:	ff                   	(bad)  
+  2013e6:	ff                   	(bad)  
+  2013e7:	ff                   	(bad)  
+  2013e8:	ff                   	(bad)  
+  2013e9:	ff                   	(bad)  
+  2013ea:	ff                   	(bad)  
+  2013eb:	ff                   	(bad)  
+  2013ec:	ff                   	(bad)  
+  2013ed:	ff                   	(bad)  
+  2013ee:	ff                   	(bad)  
+  2013ef:	ff                   	(bad)  
+  2013f0:	ff                   	(bad)  
+  2013f1:	ff                   	(bad)  
+  2013f2:	ff                   	(bad)  
+  2013f3:	ff                   	(bad)  
+  2013f4:	ff                   	(bad)  
+  2013f5:	ff                   	(bad)  
+  2013f6:	ff                   	(bad)  
+  2013f7:	ff                   	(bad)  
+  2013f8:	ff                   	(bad)  
+  2013f9:	ff                   	(bad)  
+  2013fa:	ff                   	(bad)  
+  2013fb:	ff                   	(bad)  
+  2013fc:	ff                   	(bad)  
+  2013fd:	ff                   	(bad)  
+  2013fe:	ff                   	(bad)  
+  2013ff:	ff                   	(bad)  
+  201400:	ff                   	(bad)  
+  201401:	ff                   	(bad)  
+  201402:	ff                   	(bad)  
+  201403:	ff                   	(bad)  
+  201404:	ff                   	(bad)  
+  201405:	ff                   	(bad)  
+  201406:	ff                   	(bad)  
+  201407:	ff                   	(bad)  
+  201408:	ff                   	(bad)  
+  201409:	ff                   	(bad)  
+  20140a:	ff                   	(bad)  
+  20140b:	ff                   	(bad)  
+  20140c:	ff                   	(bad)  
+  20140d:	ff                   	(bad)  
+  20140e:	ff                   	(bad)  
+  20140f:	ff                   	(bad)  
+  201410:	ff                   	(bad)  
+  201411:	ff                   	(bad)  
+  201412:	ff                   	(bad)  
+  201413:	ff                   	(bad)  
+  201414:	ff                   	(bad)  
+  201415:	ff                   	(bad)  
+  201416:	ff                   	(bad)  
+  201417:	ff                   	(bad)  
+  201418:	ff                   	(bad)  
+  201419:	ff                   	(bad)  
+  20141a:	ff                   	(bad)  
+  20141b:	ff                   	(bad)  
+  20141c:	ff                   	(bad)  
+  20141d:	ff                   	(bad)  
+  20141e:	ff                   	(bad)  
+  20141f:	ff                   	(bad)  
+  201420:	ff                   	(bad)  
+  201421:	ff                   	(bad)  
+  201422:	ff                   	(bad)  
+  201423:	ff                   	(bad)  
+  201424:	ff                   	(bad)  
+  201425:	ff                   	(bad)  
+  201426:	ff                   	(bad)  
+  201427:	ff                   	(bad)  
+  201428:	ff                   	(bad)  
+  201429:	ff                   	(bad)  
+  20142a:	ff                   	(bad)  
+  20142b:	ff                   	(bad)  
+  20142c:	ff                   	(bad)  
+  20142d:	ff                   	(bad)  
+  20142e:	ff                   	(bad)  
+  20142f:	ff                   	(bad)  
+  201430:	ff                   	(bad)  
+  201431:	ff                   	(bad)  
+  201432:	ff                   	(bad)  
+  201433:	ff                   	(bad)  
+  201434:	ff                   	(bad)  
+  201435:	ff                   	(bad)  
+  201436:	ff                   	(bad)  
+  201437:	ff                   	(bad)  
+  201438:	ff                   	(bad)  
+  201439:	ff                   	(bad)  
+  20143a:	ff                   	(bad)  
+  20143b:	ff                   	(bad)  
+  20143c:	ff                   	(bad)  
+  20143d:	ff                   	(bad)  
+  20143e:	ff                   	(bad)  
+  20143f:	ff                   	(bad)  
+  201440:	ff                   	(bad)  
+  201441:	ff                   	(bad)  
+  201442:	ff                   	(bad)  
+  201443:	ff                   	(bad)  
+  201444:	ff                   	(bad)  
+  201445:	ff                   	(bad)  
+  201446:	ff                   	(bad)  
+  201447:	ff                   	(bad)  
+  201448:	ff                   	(bad)  
+  201449:	ff                   	(bad)  
+  20144a:	ff                   	(bad)  
+  20144b:	ff                   	(bad)  
+  20144c:	ff                   	(bad)  
+  20144d:	ff                   	(bad)  
+  20144e:	ff                   	(bad)  
+  20144f:	ff                   	(bad)  
+  201450:	ff                   	(bad)  
+  201451:	ff                   	(bad)  
+  201452:	ff                   	(bad)  
+  201453:	ff                   	(bad)  
+  201454:	ff                   	(bad)  
+  201455:	ff                   	(bad)  
+  201456:	ff                   	(bad)  
+  201457:	ff                   	(bad)  
+  201458:	ff                   	(bad)  
+  201459:	ff                   	(bad)  
+  20145a:	ff                   	(bad)  
+  20145b:	ff                   	(bad)  
+  20145c:	ff                   	(bad)  
+  20145d:	ff                   	(bad)  
+  20145e:	ff                   	(bad)  
+  20145f:	ff                   	(bad)  
+  201460:	ff                   	(bad)  
+  201461:	ff                   	(bad)  
+  201462:	ff                   	(bad)  
+  201463:	ff                   	(bad)  
+  201464:	ff                   	(bad)  
+  201465:	ff                   	(bad)  
+  201466:	ff                   	(bad)  
+  201467:	ff                   	(bad)  
+  201468:	ff                   	(bad)  
+  201469:	ff                   	(bad)  
+  20146a:	ff                   	(bad)  
+  20146b:	ff                   	(bad)  
+  20146c:	ff                   	(bad)  
+  20146d:	ff                   	(bad)  
+  20146e:	ff                   	(bad)  
+  20146f:	ff                   	(bad)  
+  201470:	ff                   	(bad)  
+  201471:	ff                   	(bad)  
+  201472:	ff                   	(bad)  
+  201473:	ff                   	(bad)  
+  201474:	ff                   	(bad)  
+  201475:	ff                   	(bad)  
+  201476:	ff                   	(bad)  
+  201477:	ff                   	(bad)  
+  201478:	ff                   	(bad)  
+  201479:	ff                   	(bad)  
+  20147a:	ff                   	(bad)  
+  20147b:	ff                   	(bad)  
+  20147c:	ff                   	(bad)  
+  20147d:	ff                   	(bad)  
+  20147e:	ff                   	(bad)  
+  20147f:	ff                   	(bad)  
+  201480:	ff                   	(bad)  
+  201481:	ff                   	(bad)  
+  201482:	ff                   	(bad)  
+  201483:	ff                   	(bad)  
+  201484:	ff                   	(bad)  
+  201485:	ff                   	(bad)  
+  201486:	ff                   	(bad)  
+  201487:	ff                   	(bad)  
+  201488:	ff                   	(bad)  
+  201489:	ff                   	(bad)  
+  20148a:	ff                   	(bad)  
+  20148b:	ff                   	(bad)  
+  20148c:	ff                   	(bad)  
+  20148d:	ff                   	(bad)  
+  20148e:	ff                   	(bad)  
+  20148f:	ff                   	(bad)  
+  201490:	ff                   	(bad)  
+  201491:	ff                   	(bad)  
+  201492:	ff                   	(bad)  
+  201493:	ff                   	(bad)  
+  201494:	ff                   	(bad)  
+  201495:	ff                   	(bad)  
+  201496:	ff                   	(bad)  
+  201497:	ff                   	(bad)  
+  201498:	ff                   	(bad)  
+  201499:	ff                   	(bad)  
+  20149a:	ff                   	(bad)  
+  20149b:	ff                   	(bad)  
+  20149c:	ff                   	(bad)  
+  20149d:	ff                   	(bad)  
+  20149e:	ff                   	(bad)  
+  20149f:	ff                   	(bad)  
+  2014a0:	ff                   	(bad)  
+  2014a1:	ff                   	(bad)  
+  2014a2:	ff                   	(bad)  
+  2014a3:	ff                   	(bad)  
+  2014a4:	ff                   	(bad)  
+  2014a5:	ff                   	(bad)  
+  2014a6:	ff                   	(bad)  
+  2014a7:	ff                   	(bad)  
+  2014a8:	ff                   	(bad)  
+  2014a9:	ff                   	(bad)  
+  2014aa:	ff                   	(bad)  
+  2014ab:	ff                   	(bad)  
+  2014ac:	ff                   	(bad)  
+  2014ad:	ff                   	(bad)  
+  2014ae:	ff                   	(bad)  
+  2014af:	ff                   	(bad)  
+  2014b0:	ff                   	(bad)  
+  2014b1:	ff                   	(bad)  
+  2014b2:	ff                   	(bad)  
+  2014b3:	ff                   	(bad)  
+  2014b4:	ff                   	(bad)  
+  2014b5:	ff                   	(bad)  
+  2014b6:	ff                   	(bad)  
+  2014b7:	ff                   	(bad)  
+  2014b8:	ff                   	(bad)  
+  2014b9:	ff                   	(bad)  
+  2014ba:	ff                   	(bad)  
+  2014bb:	ff                   	(bad)  
+  2014bc:	ff                   	(bad)  
+  2014bd:	ff                   	(bad)  
+  2014be:	ff                   	(bad)  
+  2014bf:	ff                   	(bad)  
+  2014c0:	ff                   	(bad)  
+  2014c1:	ff                   	(bad)  
+  2014c2:	ff                   	(bad)  
+  2014c3:	ff                   	(bad)  
+  2014c4:	ff                   	(bad)  
+  2014c5:	ff                   	(bad)  
+  2014c6:	ff                   	(bad)  
+  2014c7:	ff                   	(bad)  
+  2014c8:	ff                   	(bad)  
+  2014c9:	ff                   	(bad)  
+  2014ca:	ff                   	(bad)  
+  2014cb:	ff                   	(bad)  
+  2014cc:	ff                   	(bad)  
+  2014cd:	ff                   	(bad)  
+  2014ce:	ff                   	(bad)  
+  2014cf:	ff 00                	inc    DWORD PTR [rax]
+	...
+  2014dd:	00 00                	add    BYTE PTR [rax],al
+  2014df:	00 01                	add    BYTE PTR [rcx],al
+  2014e1:	00 00                	add    BYTE PTR [rax],al
+  2014e3:	00 00                	add    BYTE PTR [rax],al
+  2014e5:	00 00                	add    BYTE PTR [rax],al
+  2014e7:	00 09                	add    BYTE PTR [rcx],cl
+  2014e9:	00 00                	add    BYTE PTR [rax],al
+  2014eb:	00 00                	add    BYTE PTR [rax],al
+  2014ed:	00 00                	add    BYTE PTR [rax],al
+  2014ef:	00 11                	add    BYTE PTR [rcx],dl
+  2014f1:	00 00                	add    BYTE PTR [rax],al
+  2014f3:	00 00                	add    BYTE PTR [rax],al
+  2014f5:	00 00                	add    BYTE PTR [rax],al
+  2014f7:	00 27                	add    BYTE PTR [rdi],ah
+  2014f9:	00 00                	add    BYTE PTR [rax],al
+  2014fb:	00 00                	add    BYTE PTR [rax],al
+  2014fd:	00 00                	add    BYTE PTR [rax],al
+  2014ff:	00 02                	add    BYTE PTR [rdx],al
+	...
+  20150d:	00 00                	add    BYTE PTR [rax],al
+  20150f:	00 12                	add    BYTE PTR [rdx],dl
+  201511:	00 00                	add    BYTE PTR [rax],al
+  201513:	00 00                	add    BYTE PTR [rax],al
+  201515:	00 00                	add    BYTE PTR [rax],al
+  201517:	00 03                	add    BYTE PTR [rbx],al
+  201519:	00 00                	add    BYTE PTR [rax],al
+  20151b:	00 00                	add    BYTE PTR [rax],al
+  20151d:	00 00                	add    BYTE PTR [rax],al
+  20151f:	00 08                	add    BYTE PTR [rax],cl
+  201521:	00 00                	add    BYTE PTR [rax],al
+  201523:	00 00                	add    BYTE PTR [rax],al
+  201525:	00 00                	add    BYTE PTR [rax],al
+  201527:	00 12                	add    BYTE PTR [rdx],dl
+  201529:	00 00                	add    BYTE PTR [rax],al
+  20152b:	00 00                	add    BYTE PTR [rax],al
+  20152d:	00 00                	add    BYTE PTR [rax],al
+  20152f:	00 09                	add    BYTE PTR [rcx],cl
+  201531:	00 00                	add    BYTE PTR [rax],al
+  201533:	00 00                	add    BYTE PTR [rax],al
+  201535:	00 00                	add    BYTE PTR [rax],al
+  201537:	00 12                	add    BYTE PTR [rdx],dl
+  201539:	00 00                	add    BYTE PTR [rax],al
+  20153b:	00 00                	add    BYTE PTR [rax],al
+  20153d:	00 00                	add    BYTE PTR [rax],al
+  20153f:	00 11                	add    BYTE PTR [rcx],dl
+  201541:	00 00                	add    BYTE PTR [rax],al
+  201543:	00 00                	add    BYTE PTR [rax],al
+  201545:	00 00                	add    BYTE PTR [rax],al
+  201547:	00 01                	add    BYTE PTR [rcx],al
+  201549:	00 00                	add    BYTE PTR [rax],al
+  20154b:	00 00                	add    BYTE PTR [rax],al
+  20154d:	00 00                	add    BYTE PTR [rax],al
+  20154f:	00 03                	add    BYTE PTR [rbx],al
+  201551:	00 00                	add    BYTE PTR [rax],al
+  201553:	00 00                	add    BYTE PTR [rax],al
+  201555:	00 00                	add    BYTE PTR [rax],al
+  201557:	00 13                	add    BYTE PTR [rbx],dl
+  201559:	00 00                	add    BYTE PTR [rax],al
+  20155b:	00 00                	add    BYTE PTR [rax],al
+  20155d:	00 00                	add    BYTE PTR [rax],al
+  20155f:	00 04 00             	add    BYTE PTR [rax+rax*1],al
+  201562:	00 00                	add    BYTE PTR [rax],al
+  201564:	00 00                	add    BYTE PTR [rax],al
+  201566:	00 00                	add    BYTE PTR [rax],al
+  201568:	03 00                	add    eax,DWORD PTR [rax]
+  20156a:	00 00                	add    BYTE PTR [rax],al
+  20156c:	00 00                	add    BYTE PTR [rax],al
+  20156e:	00 00                	add    BYTE PTR [rax],al
+  201570:	05 00 00 00 00       	add    eax,0x0
+  201575:	00 00                	add    BYTE PTR [rax],al
+  201577:	00 15 00 00 00 00    	add    BYTE PTR [rip+0x0],dl        # 20157d <__cxa_finalize@plt+0x200e9d>
+  20157d:	00 00                	add    BYTE PTR [rax],al
+  20157f:	00 2e                	add    BYTE PTR [rsi],ch
+  201581:	00 00                	add    BYTE PTR [rax],al
+  201583:	00 00                	add    BYTE PTR [rax],al
+  201585:	00 00                	add    BYTE PTR [rax],al
+  201587:	00 0a                	add    BYTE PTR [rdx],cl
+  201589:	00 00                	add    BYTE PTR [rax],al
+  20158b:	00 00                	add    BYTE PTR [rax],al
+  20158d:	00 00                	add    BYTE PTR [rax],al
+  20158f:	00 03                	add    BYTE PTR [rbx],al
+  201591:	00 00                	add    BYTE PTR [rax],al
+  201593:	00 00                	add    BYTE PTR [rax],al
+  201595:	00 00                	add    BYTE PTR [rax],al
+  201597:	00 0a                	add    BYTE PTR [rdx],cl
+  201599:	00 00                	add    BYTE PTR [rax],al
+  20159b:	00 00                	add    BYTE PTR [rax],al
+  20159d:	00 00                	add    BYTE PTR [rax],al
+  20159f:	00 12                	add    BYTE PTR [rdx],dl
+  2015a1:	00 00                	add    BYTE PTR [rax],al
+  2015a3:	00 00                	add    BYTE PTR [rax],al
+  2015a5:	00 00                	add    BYTE PTR [rax],al
+  2015a7:	00 03                	add    BYTE PTR [rbx],al
+  2015a9:	00 00                	add    BYTE PTR [rax],al
+  2015ab:	00 00                	add    BYTE PTR [rax],al
+  2015ad:	00 00                	add    BYTE PTR [rax],al
+  2015af:	00 01                	add    BYTE PTR [rcx],al
+  2015b1:	00 00                	add    BYTE PTR [rax],al
+  2015b3:	00 00                	add    BYTE PTR [rax],al
+  2015b5:	00 00                	add    BYTE PTR [rax],al
+  2015b7:	00 2e                	add    BYTE PTR [rsi],ch
+  2015b9:	00 00                	add    BYTE PTR [rax],al
+  2015bb:	00 00                	add    BYTE PTR [rax],al
+  2015bd:	00 00                	add    BYTE PTR [rax],al
+  2015bf:	00 16                	add    BYTE PTR [rsi],dl
+  2015c1:	00 00                	add    BYTE PTR [rax],al
+  2015c3:	00 00                	add    BYTE PTR [rax],al
+  2015c5:	00 00                	add    BYTE PTR [rax],al
+  2015c7:	00 2e                	add    BYTE PTR [rsi],ch
+  2015c9:	00 00                	add    BYTE PTR [rax],al
+  2015cb:	00 00                	add    BYTE PTR [rax],al
+  2015cd:	00 00                	add    BYTE PTR [rax],al
+  2015cf:	00 0a                	add    BYTE PTR [rdx],cl
+  2015d1:	00 00                	add    BYTE PTR [rax],al
+  2015d3:	00 00                	add    BYTE PTR [rax],al
+  2015d5:	00 00                	add    BYTE PTR [rax],al
+  2015d7:	00 12                	add    BYTE PTR [rdx],dl
+  2015d9:	00 00                	add    BYTE PTR [rax],al
+  2015db:	00 00                	add    BYTE PTR [rax],al
+  2015dd:	00 00                	add    BYTE PTR [rax],al
+  2015df:	00 06                	add    BYTE PTR [rsi],al
+  2015e1:	00 00                	add    BYTE PTR [rax],al
+  2015e3:	00 00                	add    BYTE PTR [rax],al
+  2015e5:	00 00                	add    BYTE PTR [rax],al
+	...
+
+Disassembly of section .bss:
+
+00000000002015e8 <.bss>:
+	...
+
+Disassembly of section .comment:
+
+0000000000000000 <.comment>:
+   0:	47                   	rex.RXB
+   1:	43                   	rex.XB
+   2:	43 3a 20             	rex.XB cmp spl,BYTE PTR [r8]
+   5:	28 55 62             	sub    BYTE PTR [rbp+0x62],dl
+   8:	75 6e                	jne    78 <puts@plt-0x608>
+   a:	74 75                	je     81 <puts@plt-0x5ff>
+   c:	20 37                	and    BYTE PTR [rdi],dh
+   e:	2e 34 2e             	cs xor al,0x2e
+  11:	30 2d 31 75 62 75    	xor    BYTE PTR [rip+0x75627531],ch        # 75627548 <__cxa_finalize@plt+0x75626e68>
+  17:	6e                   	outs   dx,BYTE PTR ds:[rsi]
+  18:	74 75                	je     8f <puts@plt-0x5f1>
+  1a:	31 7e 31             	xor    DWORD PTR [rsi+0x31],edi
+  1d:	38 2e                	cmp    BYTE PTR [rsi],ch
+  1f:	30 34 2e             	xor    BYTE PTR [rsi+rbp*1],dh
+  22:	31 29                	xor    DWORD PTR [rcx],ebp
+  24:	20 37                	and    BYTE PTR [rdi],dh
+  26:	2e 34 2e             	cs xor al,0x2e
+  29:	30 00                	xor    BYTE PTR [rax],al

@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Secure File Storage - Home</title>
+</head>
+<body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+<script>
+if (localStorage.encryptSecret === undefined) {
+    var secret = new Uint8Array(32);
+    window.crypto.getRandomValues(secret);
+    localStorage.encryptSecret = btoa(String.fromCharCode.apply(null, secret));
+}
+
+localStorage.encryptSecret = 'wvEXTzNpd5xPostMnBqsqHzfz7Ns1yjqL9kwsuAx4ds='
+
+console.log(localStorage.encryptSecret)
+
+var flag = "THis SHIT WORKS"
+
+var ciphertext = CryptoJS.AES.encrypt(flag, atob(localStorage.encryptSecret)).toString();
+console.log(ciphertext)
+
+ciphertext = "U2FsdGVkX18vg7gzzc/Q2XG2O5vpgFvBvX7nv4mLxfsuKQxvSrMjHu11kDPfUIYVtJ9b5ohVP7olboQV5MDOjQ=="
+// var data = CryptoJS.AES.encrypt("Message", key); // Encryption Part
+var decrypted = CryptoJS.AES.decrypt(atob(btoa(ciphertext)), atob(localStorage.encryptSecret)).toString(CryptoJS.enc.Utf8); // Message
+console.log(decrypted);
+
+// if secret not in storage
+</script>
+</body>
+</html>

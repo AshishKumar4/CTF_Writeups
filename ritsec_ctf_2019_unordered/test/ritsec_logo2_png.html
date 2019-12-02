@@ -1,0 +1,404 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"
+ "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+<title>
+HTML Dump (./ritsec_logo2.png)</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<style type="text/css">
+<!--
+/* character style ID's */
+.D { color: #000000 } /* default color */
+.V { color: #ff0000 } /* duplicate block 1 */
+.W { color: #004400 } /* normal block 1 */
+.X { color: #ff4488 } /* duplicate block 2 */
+.Y { color: #448844 } /* normal block 2 */
+.U { color: #cc8844 } /* unused data block */
+.H { color: #0000ff } /* highlighted tag name */
+.F { color: #aa00dd } /* actual offset differs */
+.M { text-decoration: underline } /* maker notes data */
+.tt { /* tooltip text */
+    visibility: hidden;
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    left: 0;
+    font-family: Verdana, sans-serif;
+    font-size: .7em;
+    padding: 2px 4px;
+    border: 1px solid gray;
+    z-index: 3;
+}
+.tb { /* tooltip background */
+    visibility: hidden;
+    position: absolute;
+    background: #ffffdd;
+    zoom: 1;
+    -moz-opacity: 0.8;
+    -khtml-opacity: 0.8;
+    -ms-filter: 'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    z-index: 2;
+}
+/* table styles */
+table.dump {
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+table.dump td { padding: .2em .3em }
+td.c2 {
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+pre   { margin: 0 }
+table { font-size: .9em }
+body  { color: black; background: white }
+-->
+</style>
+<script language="JavaScript" type="text/JavaScript">
+<!-- Begin
+// tooltip positioning constants
+var TMAR = 4;   // top/left margins
+var BMAR = 16;  // bottom/right margins (scrollbars may overhang inner dimensions)
+var XOFF = 10;  // x offset from cursor
+var YOFF = 40;  // y offset
+var YMIN = 10;  // minimum y offset
+var YTOP = 20;  // y offset when above cursor
+// common variables
+var safari1 = navigator.userAgent.indexOf("Safari/312.6") >= 0;
+var ie6 = navigator.userAgent.toLowerCase().indexOf('msie 6') >= 0;
+var mspan = new Array;
+var hlist, tt, tb;
+
+function GetElementsByClass(classname, tagname) {
+  var found = new Array();
+  var list = document.getElementsByTagName(tagname);
+  var len = list.length;
+  for (var i=0, j=0; i<len; ++i) {
+    var classes = list[i].className.split(' ');
+    for (var k=0; k<classes.length; ++k) {
+      if (classes[k] == classname) {
+        found[j++] = list[i];
+        break;
+      }
+    }
+  }
+  return found;
+}
+
+// move tooltip
+function move(e)
+{
+  if (!tt) return;
+  if (ie6 && (tt.style.top  == '' || tt.style.top  == 0) &&
+             (tt.style.left == '' || tt.style.left == 0))
+  {
+    tt.style.width  = tt.offsetWidth  + 'px';
+    tt.style.height = tt.offsetHeight + 'px';
+  }
+  var w, h;
+  // browser inconsistencies make getting window size more complex than it should be,
+  // and even then we don't know if it is smaller due to scrollbar width
+  if (typeof(window.innerWidth) == 'number') {
+    w = window.innerWidth;
+    h = window.innerHeight;
+  } else if (document.documentElement && document.documentElement.clientWidth) {
+    w = document.documentElement.clientWidth;
+    h = document.documentElement.clientHeight;
+  } else {
+    w = document.body.clientWidth;
+    h = document.body.clientHeight;
+  }
+  var x = e.clientX + XOFF;
+  var y = e.clientY + YOFF;
+  if (safari1) { // patch for people still using OS X 10.3.9
+    x -= document.body.scrollLeft + document.documentElement.scrollLeft;
+    y -= document.body.scrollTop  + document.documentElement.scrollTop;
+  }
+  var mx = w - BMAR - tt.offsetWidth;
+  var my = h - BMAR - tt.offsetHeight;
+  if (y > my + YOFF - YMIN) y = e.clientY - YTOP - tt.offsetHeight;
+  if (x > mx) x = mx;
+  if (y > my) y = my;
+  if (x < TMAR) x = TMAR;
+  if (y < TMAR) y = TMAR;
+  x += document.body.scrollLeft + document.documentElement.scrollLeft;
+  y += document.body.scrollTop  + document.documentElement.scrollTop;
+  tb.style.width  = tt.offsetWidth  + 'px';
+  tb.style.height = tt.offsetHeight + 'px';
+  tt.style.top  = tb.style.top  = y + 'px';
+  tt.style.left = tb.style.left = x + 'px';
+  tt.style.visibility = tb.style.visibility = 'visible';
+}
+
+// highlight/unhighlight text
+function high(e,on) {
+  var targ;
+  if (e.target) targ = e.target;
+  else if (e.srcElement) targ = e.srcElement;
+  if (targ.nodeType == 3) targ = targ.parentNode; // defeat Safari bug
+  if (!targ.name) targ = targ.parentNode; // go up another level if necessary
+  if (targ.name && document.getElementsByName) {
+    // un-highlight current objects
+    if (hlist) {
+      for (var i=0; i<hlist.length; ++i) {
+        for (var j=0; j<hlist[i].length; ++j) {
+          hlist[i][j].style.background = 'transparent';
+        }
+      }
+      hlist = null;
+    }
+    if (tt) {
+      // hide old tooltip
+      tt.style.visibility = tb.style.visibility = 'hidden';
+      tt = null;
+    }
+    if (on) {
+      if (targ.name.substring(0,1) == 't') {
+        // show our tooltip (ID is different than name to avoid confusing IE)
+        tt = document.getElementById('p' + targ.name.substring(1));
+        if (tt) {
+          tb = document.getElementById('tb');
+          move(e);
+        }
+      }
+      // highlight anchor elements with the same name
+      hlist = new Array;
+      hlist.push(document.getElementsByName(targ.name));
+      // is this an IFD pointer?
+      var pos = targ.className.indexOf('Offset_');
+      if (pos > 0) {
+        // add elements from this IFD to our highlight list
+        hlist.push(document.getElementsByClassName(targ.className.substr(pos+7)));
+      }
+      // use class name to highlight span elements if necessary
+      for (var i=0; i<mspan.length; ++i) {
+        if (mspan[i] != targ.name) continue;
+        // add these span elements to our highlight list
+        hlist.push(GetElementsByClass(targ.name, 'span'));
+        break;
+      }
+      for (var i=0; i<hlist.length; ++i) {
+        for (var j=0; j<hlist[i].length; ++j) {
+          hlist[i][j].style.background = '#ffcc99';
+        }
+      }
+    }
+  }
+}
+
+// End --->
+</script></head>
+<body><noscript><b class=V>--&gt;
+Enable JavaScript for active highlighting and information tool tips!
+</b></noscript>
+<table class=dump cellspacing=0 cellpadding=2>
+<tr><td valign='top'><pre> 0000
+ 000a
+ 0016
+ 0022
+ 002e
+ 003a
+ 0046
+ 0052
+ 005e
+ 0060
+ 0070
+ 0080
+ 0090
+ 00a0
+ 00b0
+ 00c0
+ 00ce
+ 00da
+ 00e6
+ 00f2
+ 00fe
+ 0100
+ 0110
+ 0120
+ 0130
+ 0140
+ 0144
+ 0150
+ 015c
+ 0160
+ 0170
+ 0180
+ 0190
+ 01a0
+ 01b0
+ 01c0
+ 01d0
+  ...
+ 10d0
+ 10e0
+ 10f0
+ 1100
+ 1110
+ 1120
+ 1130
+ 1140
+</pre></td><td valign="top"><pre onmouseover="high(event,1)" onmouseout="high(event,0)" onmousemove="move(event)"><a name=t0 class=W>4d 4d 00 2a 00 00 00 08</a>  <a name=t1 class=Y>00 07</a>
+<a name=t2 class=W>01 0e 00 02 00 00 00 54  00 00 00 62</a>
+<a name=t3 class=Y>01 28 00 03 00 00 00 01  00 02 00 00</a>
+<a name=t4 class=W>01 3b 00 02 00 00 00 09  00 00 00 b6</a>
+<a name=t5 class=Y>02 13 00 03 00 00 00 01  00 01 00 00</a>
+<a name=t6 class=W>82 98 00 02 00 00 00 0c  00 00 00 c0</a>
+<a name=t7 class='Y Offset_o0'>87 69 00 04 00 00 00 01  00 00 00 cc</a>
+<a name=t8 class='W Offset_o1'>88 25 00 04 00 00 00 01  00 00 01 42</a>
+                                           <a name=t9 class=Y>00 00
+00 00</a> <a name=t2 class=W>48 69 20 74 68 65  72 65 21 20 4c 6f 6f 6b
+73 20 6c 69 6b 65 20 79  6f 75 72 65 20 74 72 79
+69 6e 67 20 74 6f 20 73  6f 6c 76 65 20 74 68 65
+20 66 6f 72 65 6e 73 69  63 5f 66 61 69 6c 73 20
+63 68 61 6c 6c 65 6e 67  65 21 20 47 6f 6f 64 20
+6c 75 63 6b 21 00</a> <a name=t4 class=Y>49 6d  70 6f 73 37 33 72 00</a> <a name=t10 class=U>00</a>
+<a name=t6 class=W>52 49 54 53 45 43 20 32  30 31 38 00</a> <a name=t11 class='Y o0'>00 04</a>
+<a name=t12 class='W o0'>90 00 00 07 00 00 00 04  30 32 33 31</a>
+<a name=t13 class='Y o0'>91 01 00 07 00 00 00 04  01 02 03 00</a>
+<a name=t14 class='W o0'>92 86 00 07 00 00 00 40  00 00 01 02</a>
+<a name=t15 class='Y o0'>a0 00 00 07 00 00 00 04  30 31 30 30</a>
+                                           <a name=t16 class='W o0'>00 00
+00 00</a> <a name=t14 class=Y>41 53 43 49 49 00  00 00 52 56 5a 48 52 6c
+4a 51 65 31 4e 43 52 56  4a 42 52 6c 5a 51 52 6c
+39 54 54 6c 5a 5a 52 6c  39 4b 51 6b 46 48 58 31
+56 53 57 55 4e 66 54 45  4a 49 58 31 56 53 52 56
+4a 39</a> <a name=t17 class='W o1'>00 02</a>
+<a name=t18 class='Y o1'>00 01 00 02 00 00 00 02  4e 00 00 00</a>
+<a name=t19 class='W o1'>00 03 00 02 00 00 00 02  57 00 00 00</a>
+                                     <a name=t20 class='Y o1'>00 00 00 00</a>
+<a name=t21 class=U>53 aa 8c b5 31 9c be 1b  26 f5 91 10 b2 e6 aa 42
+3a e8 f7 aa 42 03 1e 25  66 ea 7e 54 17 a7 84 49
+b3 d4 e9 40 88 79 7a 0f  9a 2a 1c c9 f4 f9 9b 42
+bd 22 f0 04 b9 6a 51 b8  b8 65 e4 1b 50 10 7d 6b
+18 d7 18 73 3c f6 8d 63  de 06 ec f9 24 ed 95 5c
+63 b9 bb 90 e1 09 b2 a3  96 83 d5 f6 57 24 7a 51
+24 7a be 4d 64 5c a0 0e  7c 42 82 0e 9d d5 b0 4a
+2e 7f 41 a0 17 05 26 e8  d2 5d d1 83 f5 be 9e 2f
+                [snip 239 lines]                
+64 32 47 dd a4 c6 37 6e  d7 c4 ae 2b fe 61 84 eb
+b9 2e 07 00 e3 04 6a ed  2a e9 e2 e1 9b 55 97 e8
+b6 39 87 2b db 30 9d b8  6d 26 65 6e 38 36 66 d4
+d9 80 3d f3 6d e5 b6 43  b2 5b c0 a0 2a c3 4a 3d
+dd 6d 60 b0 06 ea 86 96  4f bc 2c 47 6d e7 3b c1
+b7 77 43 6c bc 0e a8 77  dc 93 7e ac f2 1f 81 b7
+9f 52 a0 f8 06 68 00 00  00 00 49 45 4e 44 ae 42
+60 82</a>
+</pre></td><td class=c2 valign="top"><pre onmouseover="high(event,1)" onmouseout="high(event,0)" onmousemove="move(event)"><a name=t0 class=W>MM.*....</a><a name=t1 class=Y>..</a>
+<a name=t2 class=W>.......T...b</a>
+<a name=t3 class=Y>.(..........</a>
+<a name=t4 class=W>.;..........</a>
+<a name=t5 class=Y>............</a>
+<a name=t6 class=W>............</a>
+<a name=t7 class='Y Offset_o0'>.i..........</a>
+<a name=t8 class='W Offset_o1'>.%.........B</a>
+              <a name=t9 class=Y>..
+..</a><a name=t2 class=W>Hi there! Look
+s like youre try
+ing to solve the
+ forensic_fails 
+challenge! Good 
+luck!.</a><a name=t4 class=Y>Impos73r.</a><a name=t10 class=U>.</a>
+<a name=t6 class=W>RITSEC 2018.</a><a name=t11 class='Y o0'>..</a>
+<a name=t12 class='W o0'>........0231</a>
+<a name=t13 class='Y o0'>............</a>
+<a name=t14 class='W o0'>.......@....</a>
+<a name=t15 class='Y o0'>........0100</a>
+              <a name=t16 class='W o0'>..
+..</a><a name=t14 class=Y>ASCII...RVZHRl
+JQe1NCRVJBRlZQRl
+9TTlZZRl9KQkFHX1
+VSWUNfTEJIX1VSRV
+J9</a><a name=t17 class='W o1'>..</a>
+<a name=t18 class='Y o1'>........N...</a>
+<a name=t19 class='W o1'>........W...</a>
+            <a name=t20 class='Y o1'>....</a>
+<a name=t21 class=U>S...1...&amp;......B
+:...B..%f.~T...I
+...@.yz..*.....B
+."...jQ..e..P.}k
+...s&lt;..c....$..\
+c...........W$zQ
+$z.Md\..|B.....J
+..A...&amp;..]...../
+     [snip]     
+d2G...7n...+.a..
+......j.*....U..
+.9.+.0..m&amp;en86f.
+..=.m..C.[..*.J=
+.m`.....O.,Gm.;.
+.wCl...w..~.....
+.R...h....IEND.B
+`.</a>
+</pre></td><td valign="top"><pre onmouseover="high(event,1)" onmouseout="high(event,0)" onmousemove="move(event)"><a name=t0 class=W>TIFF header</a> <a name=t1 class=Y>IFD0 entries</a>
+<a name=t2 class=W>IFD0-00 <span class=H>ImageDescription</span></a>
+<a name=t3 class=Y>IFD0-01 ResolutionUnit</a>
+<a name=t4 class=W>IFD0-02 <span class=H>Artist</span></a>
+<a name=t5 class=Y>IFD0-03 YCbCrPositioning</a>
+<a name=t6 class=W>IFD0-04 <span class=H>Copyright</span></a>
+<a name=t7 class='Y Offset_o0'>IFD0-05 ExifOffset</a>
+<a name=t8 class='W Offset_o1'>IFD0-06 GPSInfo</a>
+<a name=t9 class=Y>Next IFD</a>
+<a name=t2 class=W>ImageDescription value</a>
+
+
+
+
+<a name=t4 class=Y>Artist value</a> <a name=t10 class=U>[pad byte]</a>
+<a name=t6 class=W>Copyright value</a> <a name=t11 class='Y o0'>ExifIFD entries</a>
+<a name=t12 class='W o0'>ExifIFD-00 ExifVersion</a>
+<a name=t13 class='Y o0'>ExifIFD-01 ComponentsConfiguration</a>
+<a name=t14 class='W o0'>ExifIFD-02 <span class=H>UserComment</span></a>
+<a name=t15 class='Y o0'>ExifIFD-03 FlashpixVersion</a>
+<a name=t16 class='W o0'>Next IFD</a>
+<a name=t14 class=Y>UserComment value</a>
+
+
+
+<a name=t17 class='W o1'>GPS entries</a>
+<a name=t18 class='Y o1'>GPS-00 GPSLatitudeRef</a>
+<a name=t19 class='W o1'>GPS-01 GPSLongitudeRef</a>
+<a name=t20 class='Y o1'>Next IFD</a>
+<a name=t21 class=U>[unknown data]</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre></td></tr></table>
+<div id=tb class=tb> </div>
+<div id=p0 class=tt><b>TIFF header</b><br>Byte order: Big endian<br>Identifier: 0x002a<br>IFD0 offset: 0x0008<br>(8 bytes)</div>
+<div id=p1 class=tt><b>IFD0 entries</b><br>Entry count: 7<br>(2 bytes)</div>
+<div id=p2 class=tt><b>IFD0-00 <span class=H>ImageDescription</span></b><br>Tag ID: 0x010e<br>Format: string[84]<br>Size: 84 bytes<br>Value offset: 0x0062<br>Value: Hi there! Looks like youre t[...]</div>
+<div id=p3 class=tt><b>IFD0-01 ResolutionUnit</b><br>Tag ID: 0x0128<br>Format: int16u[1]<br>Size: 2 bytes<br>Value: 2</div>
+<div id=p4 class=tt><b>IFD0-02 <span class=H>Artist</span></b><br>Tag ID: 0x013b<br>Format: string[9]<br>Size: 9 bytes<br>Value offset: 0x00b6<br>Value: Impos73r</div>
+<div id=p5 class=tt><b>IFD0-03 YCbCrPositioning</b><br>Tag ID: 0x0213<br>Format: int16u[1]<br>Size: 2 bytes<br>Value: 1</div>
+<div id=p6 class=tt><b>IFD0-04 <span class=H>Copyright</span></b><br>Tag ID: 0x8298<br>Format: string[12] read as undef[12]<br>Size: 12 bytes<br>Value offset: 0x00c0<br>Value: RITSEC 2018.</div>
+<div id=p7 class=tt><b>IFD0-05 ExifOffset</b><br>Tag ID: 0x8769<br>Format: int32u[1]<br>Size: 4 bytes<br>Value: 0x00cc</div>
+<div id=p8 class=tt><b>IFD0-06 GPSInfo</b><br>Tag ID: 0x8825<br>Format: int32u[1]<br>Size: 4 bytes<br>Value: 0x0142</div>
+<div id=p9 class=tt><b>Next IFD</b><br>IFD1 offset: 0x0000<br>(4 bytes)</div>
+<div id=p11 class=tt><b>ExifIFD entries</b><br>Entry count: 4<br>(2 bytes)</div>
+<div id=p12 class=tt><b>ExifIFD-00 ExifVersion</b><br>Tag ID: 0x9000<br>Format: undef[4]<br>Size: 4 bytes<br>Value: 0231</div>
+<div id=p13 class=tt><b>ExifIFD-01 ComponentsConfiguration</b><br>Tag ID: 0x9101<br>Format: undef[4] read as int8u[4]<br>Size: 4 bytes<br>Value: 1 2 3 0</div>
+<div id=p14 class=tt><b>ExifIFD-02 <span class=H>UserComment</span></b><br>Tag ID: 0x9286<br>Format: undef[64]<br>Size: 64 bytes<br>Value offset: 0x0102<br>Value: ASCII...RVZHRlJQe1NCRVJBRlZQ[...]</div>
+<div id=p15 class=tt><b>ExifIFD-03 FlashpixVersion</b><br>Tag ID: 0xa000<br>Format: undef[4]<br>Size: 4 bytes<br>Value: 0100</div>
+<div id=p16 class=tt><b>Next IFD</b><br>Next IFD offset: 0x0000<br>(4 bytes)</div>
+<div id=p17 class=tt><b>GPS entries</b><br>Entry count: 2<br>(2 bytes)</div>
+<div id=p18 class=tt><b>GPS-00 GPSLatitudeRef</b><br>Tag ID: 0x0001<br>Format: string[2]<br>Size: 2 bytes<br>Value: N</div>
+<div id=p19 class=tt><b>GPS-01 GPSLongitudeRef</b><br>Tag ID: 0x0003<br>Format: string[2]<br>Size: 2 bytes<br>Value: W</div>
+<div id=p20 class=tt><b>Next IFD</b><br>Next IFD offset: 0x0000<br>(4 bytes)</div>
+<div id=p21 class=tt>[unknown data]<br>Size: 4066 bytes</div>
+</body></html>
